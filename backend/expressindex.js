@@ -8,10 +8,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
-//importing all of methods 
-const ProductRoute = require('./router/products.js');
+//importing all of methods
+const FilmRoute = require('./router/film.js');
 
-app.use("/product",ProductRoute);
+app.use("/film",FilmRoute);
 
 const BookingRoute = require('./router/bookings.js')
 app.use("/bookings",BookingRoute)

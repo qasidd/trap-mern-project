@@ -3,13 +3,19 @@
 const mongoose = require('mongoose');
 const {Schema,model} = mongoose;
 
-const productSchema = new Schema({
-    name : String,
-    price : String,
-    onSale : Boolean
+const FilmSchema = new Schema({
+    title : String,
+    releasedate : String,
+    runtime : Number,
+    genre: String,
+    poster : String,
+    trailer: String,
+    classification : Number,
+    director : String,
+    cast:String
 });
 
-const product = model('product', productSchema)
+const film = model('film', FilmSchema)
 
 const bookingSchema = new Schema({
     name : String,
@@ -24,9 +30,10 @@ const bookingSchema = new Schema({
  
 const booking = model('booking', bookingSchema)
 
-
 mongoose.connect('mongodb://localhost:27017/Booking',{ useNewUrlParser: true, useUnifiedTopology: true},(err)=>{
 
 if(err){console.error(err);}else{console.log('Connected')}
 });
-module.exports ={'product':product,'booking':booking};
+
+module.exports ={'film':film,'booking':booking};
+
