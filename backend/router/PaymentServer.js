@@ -11,9 +11,9 @@ app.post('/create-payment-checkout-session', async (req, res) => {
         line_items: [
             {
                 price_data: {
-                    currency: 'gbp',
+                    currency:'gbp',
                     booking_data: {
-                        filmName: 'The WaterBoy'
+                        filmName: 'The Waterboy'
 
                     },
                     unit_amount: 2500,
@@ -21,7 +21,9 @@ app.post('/create-payment-checkout-session', async (req, res) => {
                 quantity: 1,
             },
         ],
-        mode: 'payment'
+        mode: 'payment',
+        success_url:`${cinemaDomain}?success=true`,
+        cancel_url:`${cinemaDomain}?canceled=true`,
     });
 
     res.json({ id: session.id });
