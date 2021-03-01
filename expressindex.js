@@ -9,9 +9,9 @@ app.use(bodyParser.json());
 
 
 //importing all of methods 
-const ProductRoute = require('./router/products.js');
+const FilmRoute = require('./router/film.js');
 
-app.use("/product",ProductRoute);
+app.use("/film",FilmRoute);
 
 const BookingRoute = require('./router/bookings.js')
 app.use("/bookings",BookingRoute)
