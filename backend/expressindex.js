@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
-//importing all of methods 
+//importing all of methods
 const FilmRoute = require('./router/film.js');
 
 app.use("/film",FilmRoute);
