@@ -1,5 +1,10 @@
+:root {
+    --main-bg-colour: #9B9898;
+    --main-accent-colour: #FF6033
+}
+
 body {
-    background-color: #9B9898;
+    background-color: var(--main-bg-colour);
 }
 
 .classifications {
@@ -7,9 +12,13 @@ body {
 }
 
 .classifications header h1 {
-    color: #FF6033;
+    color: var(--main-accent-colour);
+}
+
+a {
+    color: var(--main-accent-colour) !important;
 }
 
 .classifications .nav-item a {
-    color: #FF6033;
+    color: var(--main-accent-colour);
 }
