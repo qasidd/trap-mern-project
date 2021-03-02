@@ -22,3 +22,28 @@ a {
 .mainContent .nav-item a {
     color: var(--main-accent-colour);
 }
+
+.galleryPoster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0px 2rem;
+    text-align: center;
+    transition: transform .2s;
+    color: white;
+}
+
+.galleryPoster span {
+    visibility: hidden;
+}
+
+.galleryPoster:hover {
+    transform: scale(1.02);
+    box-shadow: inset 0px 0px 300px 5px rgba(0,0,0,0.6);
+}
+
+.galleryPoster:hover span {
+    visibility: visible;
+}
+

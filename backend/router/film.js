@@ -23,14 +23,14 @@ router.get("/get/:id", (req, res, next) => {
 
 // get all films that are now showing
 router.get("/getAll/nowShowing", (req, res, next) => {
-    film.find({ releasedate: { $lte: new Date().toDateString() } }, (err, film) => {
+    film.find({ releasedate: { $lte: new Date() } }, (err, film) => {
         if (err) { next(err) } else { res.send(film) }
     })
 })
 
 // get all films that are upcoming
 router.get("/getAll/upcoming", (req, res, next) => {
-    film.find({ releasedate: { $gt: new Date().toDateString() } }, (err, film) => {
+    film.find({ releasedate: { $gt: new Date() } }, (err, film) => {
         if (err) { next(err) } else { res.send(film) }
     })
 })
@@ -38,8 +38,8 @@ router.get("/getAll/upcoming", (req, res, next) => {
 router.post("/create", (req, res, next) => {
     const Movie = new film(req.body);
     Movie.save().then((film) => {
-            res.status(201).send(`${film.title} has been added successfully!`)
-        })
+        res.status(201).send(`${film.title} has been added successfully!`)
+    })
         .catch((err) => next(err));
 
 });
@@ -68,7 +68,7 @@ router.patch("/update/:id", (req, res, next) => {
 //update whole document
 //  REPLACE
 router.put("/replace/:id", (req, res, next) => {
-    const {  title,
+    const { title,
         releasedate,
         runtime,
         genre,

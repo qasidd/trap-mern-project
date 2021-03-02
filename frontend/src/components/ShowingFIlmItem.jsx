@@ -2,7 +2,7 @@
 
 const ShowingFilmItem = ({ film }) => {
 
-    const { 
+    const {
         _id,
         title,
         releasedate,
@@ -16,7 +16,20 @@ const ShowingFilmItem = ({ film }) => {
     } = film;
 
     return (
-        <p>Title: {title}, Release date: {releasedate}, Director: {director}</p>
+        <div className="col-lg-3 col-md-4 col-sm-6">
+            <div 
+                className="galleryPoster zoom" 
+                style={{ 
+                    backgroundImage: `url(${poster})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    height: '100vh',
+                    maxHeight: '400px'
+                }}
+            >
+                <span>{title}</span>
+            </div>
+        </div>
     )
 }
 
