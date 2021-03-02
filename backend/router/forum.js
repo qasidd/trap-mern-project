@@ -24,7 +24,7 @@ router.get("/get/:id", (req, res, next) => {
 router.post("/create", (req, res, next) => {
     const Message = new forum(req.body);
     Message.save().then((forum) => {
-            res.status(201).send(`${forum.username} has been added successfully!`)
+            res.status(201).send(`${forum.username} post has been added successfully!`)
         })
         .catch((err) => next(err));
 
@@ -57,13 +57,15 @@ router.put("/replace/:id", (req, res, next) => {
     const { username,
         movietitle,
         comment,
-        created,
+        rating,
+        created
     } = req.body;
     booking.findByIdAndUpdate(req.params.id, {
         username,
 movietitle,
 comment,
-created,
+rating,
+created
     }, { new: true }, (err, result) => {
         if (err) {
             next(err);

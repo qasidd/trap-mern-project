@@ -12,6 +12,7 @@ const PostList = ({ post, trigger }) => {
                 </ToastHeader>
                 <ToastBody style={{ height: "auto" }}>
                     {post.movietitle}
+                    {post.rating}
                     {post.comment}
                     {post.created}
                     <hr />

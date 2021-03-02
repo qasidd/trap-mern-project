@@ -35,6 +35,7 @@ const ForumSchema = new Schema({
 username:String,
 movietitle : String,
 comment : String,
+rating:Number,
 created : Date
 
 });

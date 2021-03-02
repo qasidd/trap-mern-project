@@ -10,13 +10,14 @@ const CreatePost  = ({trigger}) => {
         const [username, setUsername] = useState('');
         const [movietitle, setMovietitle] = useState('');
         const [comment, setComment] = useState('');
+        const [rating, setRating] = useState(0);
         const [created, setCreated] = useState('');
         
        
     
         const create = (e) => {
             e.preventDefault(); 
-            axios.post(`${Forum_URL}/create`, {username,movietitle,comment,created})
+            axios.post(`${Forum_URL}/create`, {username,movietitle,comment,rating,created})
                 .then((res) => {
                     // console.log(res.data);
                     clearValues();
@@ -30,6 +31,7 @@ const CreatePost  = ({trigger}) => {
             setUsername('');
             setMovietitle('');
             setComment('');
+            setRating(0);
             setCreated('');
         }
     
@@ -59,6 +61,13 @@ const CreatePost  = ({trigger}) => {
                                 placeholder="Comment"
                                 value={comment}
                                 onChange={({ target }) => setComment(target.value)}
+                            />
+                            <input
+                                type="number"
+                                className="form-control"
+                                placeholder="Rating"
+                                value={rating}
+                                onChange={({ target }) => setRating(target.value)}
                             />
                             <input
                                 type="date"

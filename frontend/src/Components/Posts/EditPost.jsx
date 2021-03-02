@@ -5,10 +5,11 @@ import { Forum_URL } from '../CONSTS.json';
 const EditPost = ({ post, trigger }) => {
 
     // Data from DB
-    const { username, movietitle, comment,created } = post;
+    const { username, movietitle, comment,rating,created } = post;
     const [updateUsername, setUUsername] = useState(username);
     const [updateMovietitle, setUMovietitle] = useState(movietitle);
     const [updateComment, setUComment] = useState(comment);
+    const [updateRating, setURating] = useState(rating);
     const [updateCreated, setUCreated] = useState(created);
     // Modal
     const [showModal, setShowModal] = useState(false);
@@ -18,7 +19,7 @@ const EditPost = ({ post, trigger }) => {
     const updateDatabase = (e) => {
         e.preventDefault();
         axios.patch(`${Forum_URL}/update/${post._id}`,
-            { username: updateUsername, movietitle: updateMovietitle, comment: updateComment,created:updateCreated})
+            { username: updateUsername, movietitle: updateMovietitle, comment: updateComment,rating:updateRating,created:updateCreated})
             .then((res) => {
                 trigger(res.data);
                 toggle();
@@ -55,6 +56,13 @@ const EditPost = ({ post, trigger }) => {
                             placeholder="Comment"
                             value={updateComment}
                             onChange={({ target }) => setUComment(target.value)}
+                        />
+                        <input
+                            type="number"
+                            className="form-control"
+                            placeholder="Rating"
+                            value={updateRating}
+                            onChange={({ target }) => setURating(target.value)}
                         />
                         <input
                             type="date"
