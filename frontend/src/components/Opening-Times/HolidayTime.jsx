@@ -1,14 +1,12 @@
-'use strict';
 
 import { Table } from 'react-bootstrap';
-import HolidayTime from "./HolidayTime"
 
-const OpeningTime =()=>{
+const Holidays=()=>{
 return(
     <>
-
+<br></br>
     <div className="Container text-center">
-        <h3> Our Opening Times</h3>
+        <h3> Opening Times During Christmas and Easter Holidays</h3>
     </div>
     <br></br>
 
@@ -29,41 +27,40 @@ return(
   <tbody>
     <tr className="container text-center">
       <td colSpan="1">Morning</td>
-      <td>10:00-12:30</td>
-      <td>9:30-11:30 </td>
+      <td>-</td>
+      <td>-</td>
       <td>10:15-12:15</td>
       <td>10:00-12:20</td>
-      <td>9:30-12:30</td>
+      <td>-</td>
       <td>10:00-12:00</td>
       <td>10:00:12-15</td>
     </tr>
     <tr className="container text-center">
       <td colSpan="1">Afternoon</td>
-      <td>13:00-17:00</td>
-      <td>12:00-18:00</td>
+      <td>-</td>
+      <td>-</td>
       <td>12:45-18:15</td>
       <td>12:40-17:00</td>
-      <td>13:00-18:30</td>
+      <td>-</td>
       <td>12:30-17:00</td>
       <td>12:15-16:15</td>
     </tr>
     <tr className="container text-center">
       <td colSpan="1">Evening</td>
       <td>17:25-22:00</td>
-      <td>18:30-23:00</td>
+      <td>18:30-22:30</td>
       <td>18:15-00:15</td>
       <td>17:30-23:45</td>
-      <td>19:00-01:00</td>
-      <td>17:00-00:30</td>
-      <td>16:45-22:45</td>
+      <td>18:00-00:00</td>
+      <td>17:00-23:30</td>
+      <td>16:45-21:45</td>
     </tr>
   </tbody>
 </Table>
-<HolidayTime/>
 
 </>
 )
 
 }
 
-export default OpeningTime;
+export default Holidays;
