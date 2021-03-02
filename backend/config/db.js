@@ -5,12 +5,12 @@ const {Schema,model} = mongoose;
 
 const FilmSchema = new Schema({
     title : String,
-    releasedate : String,
+    releasedate : Date,
     runtime : Number,
     genre: String,
     poster : String,
     trailer: String,
-    classification : Number,
+    classification : String,
     director : String,
     cast:String
 });
@@ -30,10 +30,20 @@ const bookingSchema = new Schema({
  
 const booking = model('booking', bookingSchema)
 
+const ForumSchema = new Schema({
+
+username:String,
+movietitle : String,
+comment : String,
+created : Date
+
+});
+const forum = model('forum',ForumSchema)
+
 mongoose.connect('mongodb://localhost:27017/Booking',{ useNewUrlParser: true, useUnifiedTopology: true},(err)=>{
 
 if(err){console.error(err);}else{console.log('Connected')}
 });
 
-module.exports ={'film':film,'booking':booking};
+module.exports ={'film':film,'booking':booking,'forum':forum};
 
