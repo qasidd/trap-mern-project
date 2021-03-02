@@ -7,11 +7,11 @@ body {
     background-color: var(--main-bg-colour);
 }
 
-.classifications {
+.mainContent {
     padding-top: 1em;
 }
 
-.classifications header h1 {
+.mainContent h1 {
     color: var(--main-accent-colour);
 }
 
@@ -19,6 +19,6 @@ a {
     color: var(--main-accent-colour) !important;
 }
 
-.classifications .nav-item a {
+.mainContent .nav-item a {
     color: var(--main-accent-colour);
 }

@@ -4,13 +4,14 @@ const router = require('express').Router();
 const { film } = require("../config/db")
 
 
-//requeste e.g. CRUD
+//requests e.g. CRUD
 
 router.get("/getAll", (req, res, next) => {
     film.find((err, film) => {
         if (err) { next(err) } else { res.send(film) }
     })
 });
+
 router.get("/get/:id", (req, res, next) => {
     film.findById(req.params.id, (err, result) => {
         if (err) {
@@ -20,6 +21,19 @@ router.get("/get/:id", (req, res, next) => {
     })
 })
 
+// get all films that are now showing
+router.get("/getAll/nowShowing", (req, res, next) => {
+    film.find({ releasedate: { $lte: new Date().toDateString() } }, (err, film) => {
+        if (err) { next(err) } else { res.send(film) }
+    })
+})
+
+// get all films that are upcoming
+router.get("/getAll/upcoming", (req, res, next) => {
+    film.find({ releasedate: { $gt: new Date().toDateString() } }, (err, film) => {
+        if (err) { next(err) } else { res.send(film) }
+    })
+})
 
 router.post("/create", (req, res, next) => {
     const Movie = new film(req.body);
