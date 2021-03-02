@@ -1,11 +1,13 @@
-import CardPayForm from "./Components/Payments/CardPayForm";
+import PaymentForm from "./Components/Payments/PaymentForm";
+import CardForm from "./Components/Payments/CardForm";
 import './resources/App.css';
 
 function App() {
   return (
     <div className="App">
       <p>Dan's Test</p>
-      <CardPayForm/>
+      {/* <PaymentForm/> */}
+      <CardForm/>
       
     </div>
   );
