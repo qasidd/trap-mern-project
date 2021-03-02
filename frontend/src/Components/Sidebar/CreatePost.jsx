@@ -9,7 +9,7 @@ const CreatePost  = ({trigger}) => {
         // states for form
         const [username, setUsername] = useState('');
         const [movietitle, setMovietitle] = useState('');
-        const [comment, setComment] = useState(0);
+        const [comment, setComment] = useState('');
         const [created, setCreated] = useState('');
         
        

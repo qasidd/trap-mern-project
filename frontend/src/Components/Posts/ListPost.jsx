@@ -11,8 +11,12 @@ const PostList = ({ post, trigger }) => {
                 <ToastHeader>{post.username}
                 </ToastHeader>
                 <ToastBody style={{ height: "auto" }}>
+                    {post.movietitle}
                     {post.comment}
+                    {post.created}
                     <hr />
+                    <br></br>
+                    
                     <DeletePost className="float-right" del={post._id} trigger={trigger} />
                     <EditPost className="float-right" post={post} trigger={trigger} />
 
