@@ -5,14 +5,15 @@ const {Schema,model} = mongoose;
 
 const FilmSchema = new Schema({
     title : String,
-    releasedate : String,
+    releasedate : Date,
     runtime : Number,
     genre: String,
     poster : String,
     trailer: String,
-    classification : Number,
+    classification : String,
     director : String,
-    cast:String
+    cast: String,
+    desc: String
 });
 
 const film = model('film', FilmSchema)

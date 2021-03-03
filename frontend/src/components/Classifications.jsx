@@ -167,12 +167,8 @@ const Classifications = () => {
     )
 
     return (
-        <div className="classifications container">
-            <header className="row">
-                <div className="col">
-                    <h1 className="display-3">Classifications</h1>
-                </div>
-            </header>
+        <main className="mainContent container">
+            <h1 className="display-4">Classifications</h1>
             <div className="row">
                 <div className="col">
                     <p>Before they are released to the public, all films are given age ratings by the British
@@ -185,7 +181,7 @@ const Classifications = () => {
             </div>
             <div className="row mt-2">
                 <div className="col">
-                    <h2 className="display-4">Ratings</h2>
+                    <h2>Ratings</h2>
                     <Nav tabs className="mt-3">
                         <NavItem>
                             <NavLink
@@ -285,7 +281,7 @@ const Classifications = () => {
                     </TabContent>
                 </div>
             </div>
-        </div >
+        </main>
     )
 };
 
