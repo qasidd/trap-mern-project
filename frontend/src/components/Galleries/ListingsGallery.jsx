@@ -1,6 +1,6 @@
 'use strict';
 
-import ListingsGalleryFilms from "./ListingsGalleryFilms";
+import GalleryFilms from "./GalleryFilms";
 
 const ListingsGallery = () => {
 
@@ -8,7 +8,7 @@ const ListingsGallery = () => {
         <div className="mainContent container">
             <h1 className="display-4">Now Showing</h1>
             <div className="row mt-4">
-                <ListingsGalleryFilms />
+                <GalleryFilms galleryType="nowShowing" />
             </div>
         </div>
     )
