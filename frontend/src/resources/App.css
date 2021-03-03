@@ -53,7 +53,7 @@ a {
 }
 
 .filmModal {
-    max-width: 900px !important;
+    max-width: 680px !important;
 }
 
 .filmModal .modal-body {
@@ -76,24 +76,10 @@ a {
 .filmModal .modal-body img {
     position: absolute;
     z-index: 1;
-    margin-left: 82%;
+    margin-left: 76%;
     margin-top: -150px;
     border-radius: 15px;
     max-height: 200px;
-}
-
-@media (max-width: 900px) { 
-
-    .filmModal .modal-body img {
-        margin-left: 80%;
-    }
-}
-
-@media (max-width: 800px) { 
-
-    .filmModal .modal-body img {
-        margin-left: 78%;
-    }
 }
 
 @media (max-width: 710px) { 
@@ -117,13 +103,6 @@ a {
         margin-left: 70%;
     }
 }
-
-/* @media (max-width: 580px) {
-
-    .filmModal .modal-body img {
-        margin-left: 68%;
-    }
-} */
 
 @media (max-width: 560px) {
 

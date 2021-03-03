@@ -48,9 +48,7 @@ const FilmModal = ({ modal, toggle, film }) => {
                     </div>
                     <div className="col-md-8 col-12">
                         <p className="mb-0"><b>Synopsis</b></p>
-                        <p className="mb-2">A secret agent is given a single word as his weapon and sent to prevent the
-                        onset of World War III. He must travel through time and bend the laws of nature in order to be
-                        successful in his mission.</p>
+                        <p className="mb-2">{desc}</p>
                     </div>
                 </div>
             </ModalBody>
