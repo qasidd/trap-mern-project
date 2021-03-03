@@ -1,22 +1,24 @@
-
 import { Card, CardDeck } from 'react-bootstrap';
-import FancyBar from "../../resources/PlacesToGo-img/Dockyard.jpg";
-import Alchemist from "../../resources/PlacesToGo-img/Alchemist.jpg";
-import Craft from "../../resources/PlacesToGo-img/Craf.jpg";
+import Lime from "../../resources/PlacesToGo-img/Lime.jpg";
+import Pier from "../../resources/PlacesToGo-img/Pier.jpg";
+import Rouge from "../../resources/PlacesToGo-img/Rouge.jpg";
 
 
-const Bars = () => {
+const Food=()=>{
+
     return (
         <>
             <CardDeck>
                 <Card>
-                    <Card.Img variant="top" src={FancyBar} alt="The Dockyard" />
+                    <Card.Img variant="top" src={Lime} alt="Lime bar and grill" />
                     <Card.Body>
                         <div className="container text-center">
-                            <Card.Title>The Dockyard</Card.Title>
+                            <Card.Title>Lime</Card.Title>
                         </div>
                         <Card.Text>
-                            The Dockyard is a unique gastropub/bar that is near by the Quays docks. Which excels in servering beers and ale tailored to customers needs as well as serving customers homemade artisan pies.
+                            At the heart of the center of Salford Quays, just a mile away from the city center. We server food daily 
+                            from breakfast, bruch or lunch and dinner. Our menu is a combination of Southern Style american food with 
+                            a twist of Japnese food. 
                     </Card.Text>
                         <section>
                             <div className="container text-center">
@@ -24,9 +26,9 @@ const Bars = () => {
                                 <p>Partnering with QA Cinema we have selected offers for customers that have a vaild cinema ticket</p>
                                 <div>
                                     <ul>
-                                        <li> On Tuesday 10% off food</li>
-                                        <li> Buy 1 drinks get 1 for free </li>
-                                        <li>Groups of 6 get 2 large pies and 3 free drinks when spending over £35 on Fridays</li>
+                                        <li> 10% off on all items on the menu on Tuesday</li>
+                                        <li> Buy 2 large main meals get 10% off selected desserts </li>
+                                        <li> 10% off for a 3 course meal pp on Wednesday </li>
                                     </ul>
                                 </div>
                             </div>
@@ -35,33 +37,33 @@ const Bars = () => {
                         <section>
                             <div className="container text-center">
                                 <h5>Contact Details</h5>
-                                <p>Telephone Number:0161 713 3810 </p>
+                                <p>Telephone Number:0161 869 0440</p>
                                 <h6>Our Address:</h6>
-                                <p>DockHouse, Media City, Manchester, Salford M50 2EQ</p>
+                                <p>Unit G1, The Quays, Manchester, Salford M50 3AG</p>
                                 <div>
                                     <h5>Vist Our Website</h5>
-                                    <p>For more information</p>
+                                    <p>For more information about food and the menu</p>
                                 </div>
-                                <a target="_blank" href="https://dockyard.pub/media-city/">The Dockyard</a>
+                                <a target="_blank" href="http://www.limeuk.com/">Lime</a>
                             </div>
                         </section>
                     </Card.Body>
                     <Card.Footer>
                         <div className=" container text-center">
-                            <small className="text-muted">Last updated 6 months ago</small>
+                            <small className="text-muted">Last updated 8 months ago</small>
                         </div>
                     </Card.Footer>
                 </Card>
 
                 <Card>
-                    <Card.Img variant="top" src={Craft} alt="Craftbrew" />
+                    <Card.Img variant="top" src={Rouge} alt="Cafe Rouge at Salford Quays"/>
                     <Card.Body>
                         <div className="container text-center">
-                            <Card.Title>CRAFTBREW</Card.Title>
+                            <Card.Title>Café Rouge</Card.Title>
                         </div>
-                        <Card.Text>Here at Craftbrew we are a modern contemporary
-                        cafe that excels in serving craft beer, wine and others drinks. To go with sandwiches,
-                        homemade taps and deli boards from the local butcher. {' '}
+                        <Card.Text> Join us for a taste of culture and good food done right. Whatever the time of day, we have a fine 
+                            dish for you to help your cravings. From classic french/parisan food, steak with fries and beef bourguigon. At Cafe Rouge
+                            we are a french restaurant with a twist.{' '}
                         </Card.Text>
                         <section>
                             <div className="container text-center">
@@ -69,9 +71,9 @@ const Bars = () => {
                                 <p>With our partners QA Cinema we have selected offers and discounts, for customers that have a vaild cinema ticket</p>
                                 <div>
                                     <ul>
-                                        <li> On Wednesdays 15% off food and drinks</li>
-                                        <li> Buy 2 drinks get 1 for free </li>
-                                        <li>Spend £15 on drinks and get 2 free taps of your choice</li>
+                                        <li> On Mondays 10% off food and drinks</li>
+                                        <li> 2 for 1 specials for brunch </li>
+                                        <li> Spend £25 on food and get a dessert for free</li>
                                     </ul>
                                 </div>
                             </div>
@@ -80,33 +82,33 @@ const Bars = () => {
                         <section>
                             <div className="container text-center">
                                 <h5>Contact Details</h5>
-                                <p>Telephone Number: 01632 960107</p>
+                                <p>Telephone Number: 0161 549 2173</p>
                                 <h6>Our Address:</h6>
-                                <p>Unit 1, Digital World Centre, Lowry Plaza, Manchester, The Quays, Salford M50 3UB</p>
+                                <p>The Lowry Outlet Mall, Unit G40B, Manchester, Salford M50 3AZ</p>
                                 <div>
                                     <h5>Vist Our Website</h5>
                                     <p>For more information</p>
                                 </div>
-                                <a target="_blank" href="http://craftbrew-uk.com/">Craftbrew</a>
+                                <a target="_blank" href="https://www.caferouge.com/bistro-brasserie/manchester/salford-quays">Café Rouge</a>
                             </div>
                         </section>
                     </Card.Body>
                     <Card.Footer>
                         <div className=" container text-center">
-                            <small className="text-muted">Last updated 1 month ago</small>
+                            <small className="text-muted">Last updated 2 weeks ago</small>
                         </div>
                     </Card.Footer>
                 </Card>
 
                 <Card>
-                    <Card.Img variant="top" src={Alchemist} alt="Alchemist" />
+                    <Card.Img variant="top" src={Pier} alt="Pier Eight resturant Salford Quays" />
                     <Card.Body>
                         <div className="container text-center">
-                            <Card.Title>The Alchemist</Card.Title>
+                            <Card.Title>Pier Eight Restaurant</Card.Title>
                         </div>
-                        <Card.Text> We love to create masterful cocktails
-                        to tantalise your taste buds and to capture all of your sense. Using theatre to server most of our drinks
-                        which is unconventional compare to traditional methods.
+                        <Card.Text> Want to indulge in fine dining, well at Pier Eight we server fresh, British food 
+                            using seasonal ingredients. It is the perfect bar if you want to enjoy your food whilst looking at the 
+                            stunning waterside setting od Salford Quays. 
                     </Card.Text>
 
                         <section>
@@ -115,10 +117,9 @@ const Bars = () => {
                                 <p>QA Cinema customers are entiled for selected discounts which are vaild for a limited amount of time</p>
                                 <div>
                                     <ul>
-                                        <li> On Thursday 25% off food and drinks </li>
-                                        <li> Buy 1 drinks get 1 for free during lunch time </li>
-                                        <li> 15% off for groups of 6</li>
-                                        <li> Chemist Saturdays: 10% drinks or 10% food after spending £45 </li>
+                                        <li> On Thursday 20% off food and drinks </li>
+                                        <li> Show-Time Special: Buy 2 drinks get a free starter after 6pm </li>
+                                        <li> Pier Special: 10% drinks or 10% food after spending £35 </li>
                                     </ul>
                                 </div>
                             </div>
@@ -127,14 +128,14 @@ const Bars = () => {
                         <section>
                             <div className="container text-center">
                                 <h5>Contact Details</h5>
-                                <p>Telephone Number: 0161 872 7396</p>
+                                <p>Telephone Number: 0161 876 2121 </p>
                                 <h6>Our Address:</h6>
-                                <p>The Bund, The Quays, MediaCityUK,Manchester, Salford M50 3AB</p>
+                                <p>Inside The Lowry, Manchester, Salford M50 3AZ</p>
                                 <div>
                                     <h5>Vist Our Website</h5>
                                     <p>For more information</p>
                                 </div>
-                                <a target="_blank" href="https://thealchemist.uk.com/menus/">The Alchemist</a>
+                                <a target="_blank" href="http://www.piereightrestaurant.co.uk/">Pier Eight restaurant</a>
                             </div>
                         </section>
 
@@ -156,5 +157,4 @@ const Bars = () => {
     )
 
 }
-
-export default Bars;
+export default Food;

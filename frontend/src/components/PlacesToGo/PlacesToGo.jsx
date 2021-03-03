@@ -2,18 +2,19 @@
 
 import Bars from "./Bars";
 import Active from "./Active";
+import Food from "./Food";
 
 
 const PlacesToGo = () => {
     return (
         <>
-            {/* <section>
+            <section>
                 <div className="container text-center">
                     <h2>Bars</h2>
                 </div>
             </section>
             <br></br>
-            <Bars /> */}
+            <Bars />
 
             <br></br>
             <section>
@@ -23,6 +24,15 @@ const PlacesToGo = () => {
             </section>
             <br></br>
             <Active />
+
+            <br></br>
+            <section>
+                <div className="container text-center">
+                    <h2>Restaurants</h2>
+                </div>
+            </section>
+            <br></br>
+            <Food/>
         </>
     );
 }
