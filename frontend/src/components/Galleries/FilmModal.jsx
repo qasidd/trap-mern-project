@@ -1,5 +1,3 @@
-'use strict';
-
 import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap';
 
 const FilmModal = ({ modal, toggle, film, galleryType }) => {
@@ -19,7 +17,7 @@ const FilmModal = ({ modal, toggle, film, galleryType }) => {
 
     return (
         <Modal isOpen={modal} toggle={toggle} className="filmModal modal-dialog-centered">
-            <iframe height="290px" src={trailer}></iframe>
+            <iframe title={`${title} trailer`} height="290px" src={trailer}></iframe>
             <div className="modal-header">
                 <h5 className="mb-0">{title}</h5>
             </div>

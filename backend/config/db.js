@@ -13,7 +13,8 @@ const FilmSchema = new Schema({
     classification : String,
     director : String,
     cast: String,
-    desc: String
+    desc: String,
+    screenings: [Date]
 });
 
 const film = model('film', FilmSchema)
@@ -21,12 +22,11 @@ const film = model('film', FilmSchema)
 const bookingSchema = new Schema({
     name : String,
     movie_title : String,
-    screening : String,
+    screening : Date,
     nofseats : Number,
-    adult : Boolean,
-    child : Boolean,
+    adult : Number,
+    child : Number,
     concession : String
-
 });
  
 const booking = model('booking', bookingSchema)

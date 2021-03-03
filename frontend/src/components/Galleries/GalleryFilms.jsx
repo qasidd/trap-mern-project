@@ -1,5 +1,3 @@
-'use strict';
-
 import ShowingFilmItem from "./ShowingFIlmItem";
 
 import { useEffect, useState } from 'react';
