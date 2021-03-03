@@ -3,7 +3,7 @@ import OpeningTime from './components/Opening-Times/CinemaTime';
 import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 import './resources/App.css';
 
-function App() {
+const App =()=> {
   return (
     <div className="App">
       {/* <Classifications /> */}
