@@ -1,12 +1,14 @@
 import Classifications from './components/Classifications';
 import OpeningTime from './components/Opening-Times/CinemaTime';
+import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 import './resources/App.css';
 
 function App() {
   return (
     <div className="App">
       {/* <Classifications /> */}
-      <OpeningTime/>
+      {/* <OpeningTime/> */}
+      <PlacesToGo/>
     </div>
   );
 }
