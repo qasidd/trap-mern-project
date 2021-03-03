@@ -1,6 +1,7 @@
 :root {
     --main-bg-colour: #9B9898;
-    --main-accent-colour: #FF6033
+    --main-accent-colour: #FF6033;
+    --main-accent-colour-dark: #c44824;
 }
 
 body {
@@ -63,13 +64,13 @@ a {
 
 .filmModal .modal-header {
     color: white;
-    background-color: #c44824;
+    background-color: var(--main-accent-colour-dark);
     border-bottom: 0;
 }
 
 .filmModal .modal-footer {
     color: white;
-    background-color: #c44824;
+    background-color: var(--main-accent-colour-dark);
     border-top: 0;
 }
 
@@ -108,5 +109,33 @@ a {
 
     .filmModal .modal-body img {
         margin-left: 64%;
+    }
+}
+
+/* Booking */
+
+.bookingForm #selFilmPoster {
+    max-width: 100%;
+    max-height: 435px;
+    border-radius: 20px;
+}
+
+.bookingForm .form-control {
+    border: 1px solid var(--main-accent-colour);
+}
+
+.bookingForm .form-control:focus {
+    border-color: var(--main-accent-colour);
+    box-shadow: 0 0 0 .2rem rgba(255,96,51,.25);
+}
+
+.bookingForm #filmPosterDiv {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    
+    .bookingForm #filmPosterDiv {
+        margin-bottom: 1rem;
     }
 }
