@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import FilmModal from './FilmModal';
 
-const ShowingFilmItem = ({ film }) => {
+const ShowingFilmItem = ({ film, galleryType }) => {
 
     const {
         title,
@@ -28,7 +28,7 @@ const ShowingFilmItem = ({ film }) => {
             >
                 <span>{title}</span>
             </div>
-            <FilmModal modal={modal} toggle={toggle} film={film} />
+            <FilmModal modal={modal} toggle={toggle} film={film} galleryType={galleryType} />
         </div>
     )
 }

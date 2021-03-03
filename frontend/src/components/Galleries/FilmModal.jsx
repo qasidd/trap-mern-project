@@ -1,8 +1,8 @@
 'use strict';
 
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalBody, ModalFooter } from 'reactstrap';
 
-const FilmModal = ({ modal, toggle, film }) => {
+const FilmModal = ({ modal, toggle, film, galleryType }) => {
 
     const {
         title,
@@ -32,13 +32,13 @@ const FilmModal = ({ modal, toggle, film }) => {
                 <div className="row">
                     <div className="col-md-4 col-12">
                         <div className="row">
-                            <div className="col-4">
+                            <div className="col-5">
                                 <p className="mb-0"><b>Runtime</b></p>
                                 <p className="mb-2">{runtime} mins</p>
                                 <p className="mb-0"><b>Genre</b></p>
                                 <p className="mb-2">{genre}</p>
                             </div>
-                            <div className="col-8">
+                            <div className="col-7">
                                 <p className="mb-0"><b>Classification</b></p>
                                 <p className="mb-2">{classification}</p>
                                 <p className="mb-0"><b>Release date</b></p>
@@ -52,7 +52,7 @@ const FilmModal = ({ modal, toggle, film }) => {
                     </div>
                 </div>
             </ModalBody>
-            <ModalFooter>
+            <ModalFooter className={galleryType === "upcoming" ? "d-none" : ""}>
                 <Button color="outline-light" onClick={toggle}>See Tickets</Button>
             </ModalFooter>
         </Modal >

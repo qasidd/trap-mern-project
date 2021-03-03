@@ -5,16 +5,16 @@ import ShowingFilmItem from "./ShowingFIlmItem";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Alert, Spinner } from 'reactstrap';
-import { FILM_URL } from './CONSTS.json';
+import { FILM_URL } from '../CONSTS.json';
 
-const ListingsGalleryFilms = () => {
+const GalleryFilms = ({ galleryType }) => {
 
     const [isLoaded, setIsLoaded] = useState(false);
     const [error, setError] = useState(null);
     const [filmList, setFilmList] = useState([]);
 
     useEffect(() => {
-        axios.get(`${FILM_URL}/getAll/nowShowing`)
+        axios.get(`${FILM_URL}/getAll/${galleryType}`)
             .then((res) => {
                 setFilmList(res.data);
                 setIsLoaded(true);
@@ -33,11 +33,11 @@ const ListingsGalleryFilms = () => {
         return (
             <>
                 {filmList.map((film, i) => (
-                    <ShowingFilmItem key={i} film={film} />
+                    <ShowingFilmItem key={i} film={film} galleryType={galleryType} />
                 ))}
             </>
         )
     }
 };
 
-export default ListingsGalleryFilms;
+export default GalleryFilms;
