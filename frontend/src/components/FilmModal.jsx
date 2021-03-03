@@ -30,21 +30,34 @@ const FilmModal = ({ modal, toggle, film }) => {
                 <p className="mb-0"><b>Starring</b></p>
                 <p className="mb-2">{cast}</p>
                 <div className="row">
-                    <div className="col-4">
-                        <p className="mb-0"><b>Classification</b></p>
-                        <p className="mb-2">{classification}</p>
-                        <p className="mb-0"><b>Genre</b></p>
-                        <p className="mb-2">{genre}</p>
+                    <div className="col-md-4 col-12">
+                        <div className="row">
+                            <div className="col-4">
+                                <p className="mb-0"><b>Runtime</b></p>
+                                <p className="mb-2">{runtime} mins</p>
+                                <p className="mb-0"><b>Genre</b></p>
+                                <p className="mb-2">{genre}</p>
+                            </div>
+                            <div className="col-8">
+                                <p className="mb-0"><b>Classification</b></p>
+                                <p className="mb-2">{classification}</p>
+                                <p className="mb-0"><b>Release date</b></p>
+                                <p className="mb-2">{new Date(releasedate).toDateString().substr(4)}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-8">
-                        <p className="mb-0"><b>Runtime</b></p>
-                        <p className="mb-2">{runtime} mins</p>
-                        <p className="mb-0"><b>Release date</b></p>
-                        <p className="mb-2">{releasedate}</p>
+                    <div className="col-md-8 col-12">
+                        <p className="mb-0"><b>Synopsis</b></p>
+                        <p className="mb-2">A secret agent is given a single word as his weapon and sent to prevent the
+                        onset of World War III. He must travel through time and bend the laws of nature in order to be
+                        successful in his mission.</p>
                     </div>
                 </div>
             </ModalBody>
-        </Modal>
+            <ModalFooter>
+                <Button color="outline-light" onClick={toggle}>See Tickets</Button>
+            </ModalFooter>
+        </Modal >
     )
 }
 

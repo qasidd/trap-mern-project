@@ -55,14 +55,13 @@ router.delete("/delete/:id", (res, req, next) => {
 });
 
 router.patch("/update/:id", (req, res, next) => {
-    film.findByIdAndUpdate(req, params.id,
+    film.findByIdAndUpdate(
+        req.params.id,
         req.body,
         { new: true },
         (err, result) => {
             if (err) { next(err); }
             res.status(202).send('Succesfully Updated')
-
-
         })
 });
 //update whole document
