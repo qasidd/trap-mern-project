@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FILM_URL } from '../CONSTS.json';
+import ConcessionInput from './ConcessionInput';
 
 const NewBooking = (props) => {
 
@@ -13,16 +14,9 @@ const NewBooking = (props) => {
     const [name, setName] = useState("");
     const [adults, setAdults] = useState(0);
     const [children, setChildren] = useState(0);
-    const [concession, setConcession] = useState("");
-
-    const selectedFilm = ({ target }) => {
-        setSelFilmName(target.value);
-        const filmObject = filmList.filter((film) => {
-            return film.title == target.value;
-        })
-        setSelFilmObject(filmObject[0]);
-        setSelFilmScreenings(filmObject[0].screenings);
-    }
+    const [concessionInputArray, setConcessionInputArray] = useState([]);
+    const [concessionInputArrayLength, setConcessionInputArrayLength] = useState(0);
+    const [total, setTotal] = useState(0.0);
 
     useEffect(() => {
         axios.get(`${FILM_URL}/getAll/nowShowing`)
@@ -34,10 +28,33 @@ const NewBooking = (props) => {
             });
     }, []);
 
+    const addConcessionInput = () => {
+        setConcessionInputArrayLength(concessionInputArrayLength + 1);
+    }
+
+    useEffect(() => {
+        if (concessionInputArrayLength) {
+            setConcessionInputArray([...concessionInputArray, <ConcessionInput key={concessionInputArrayLength} />]);
+        }
+    }, [concessionInputArrayLength]);
+
+    const selectedFilm = ({ target }) => {
+        setSelFilmName(target.value);
+        const filmObject = filmList.filter((film) => {
+            return film.title === target.value;
+        })
+        setSelFilmObject(filmObject[0]);
+        setSelFilmScreenings(filmObject[0].screenings);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    }
+
     return (
         <div className="mainContent container">
             <h1 className="display-4">New Booking</h1>
-            <form className="mt-3 bookingForm">
+            <form className="mt-3 bookingForm" onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-md-6 col-lg-8 order-md-1 order-2">
                         <div className="form-group">
@@ -59,7 +76,7 @@ const NewBooking = (props) => {
                                     onChange={({ target }) => { setScreening(target.value) }}
                                 >
                                     {
-                                        selFilmScreenings.length == 0 ?
+                                        selFilmScreenings.length === 0 ?
                                             (<option> - </option>) :
                                             selFilmScreenings.map((screening, i) => (
                                                 <option key={i}>{new Date(screening).toUTCString()}</option>
@@ -68,15 +85,14 @@ const NewBooking = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-4">
-                                <div className="form-check">
-                                    <input 
-                                        type="checkbox" 
-                                        name="deluxeCheck" 
-                                        id="deluxeCheck" 
-                                        className="form-check-input" 
-                                    />
-                                    <label htmlFor="deluxeCheck" className="form-check-label">Deluxe</label>
-                                </div>
+                                <label htmlFor="filmSelect">Deluxe</label>
+                                <select
+                                    class="form-control"
+                                    onChange={({ target }) => setDeluxe(target.value === "Yes" ? true : false)}
+                                >
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
                             </div>
                         </div>
                         <div className="form-group">
@@ -111,22 +127,30 @@ const NewBooking = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="concessionSelect">Concession</label>
-                            <select
-                                class="form-control"
-                                name="concessionSelect"
-                                onChange={({ target }) => { setConcession(target.value) }}
-                            >
-                                <option value="None">None</option>
-                                <option value="Student">Student</option>
-                                <option value="Senior">Senior</option>
-                                <option value="Armed Forces">Armed Forces</option>
-                            </select>
+                        <label>Concession(s)</label>
+                        {concessionInputArray.map((input) => (input))}
+                        <div className="form-row">
+                            <div className="col-12">
+                                <button
+                                    className="btn btn-outline-accent"
+                                    onClick={addConcessionInput}
+                                >
+                                    + Add new concession
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div className="col-md-6 col-lg-4 order-md-2 order-1" id="filmPosterDiv">
                         <img src={selFilmObject == null ? "" : selFilmObject.poster} alt="Selected film poster" id="selFilmPoster" />
+                        <div id="bookingTotalDiv">
+                            <h4><small>Total:</small> {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'GBP' }).format(total)}</h4>
+                            <button
+                                type="submit"
+                                className="btn btn-outline-light"
+                            >
+                                Proceed to payment
+                        </button>
+                        </div>
                     </div>
                 </div>
             </form>
