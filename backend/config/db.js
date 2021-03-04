@@ -31,10 +31,20 @@ const bookingSchema = new Schema({
  
 const booking = model('booking', bookingSchema)
 
+const ContactSchema = new Schema({
+    name : String,
+    email : String,
+    subject : String,
+    message : String
+
+});
+ 
+const contact = model('contact', ContactSchema)
+
 mongoose.connect('mongodb://localhost:27017/Booking',{ useNewUrlParser: true, useUnifiedTopology: true},(err)=>{
 
 if(err){console.error(err);}else{console.log('Connected')}
 });
 
-module.exports ={'film':film,'booking':booking};
+module.exports ={'film':film,'booking':booking,'contact':contact};
 
