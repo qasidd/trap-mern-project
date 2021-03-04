@@ -1,5 +1,7 @@
 'use strict';
 
+import GoogleMap from "./GoogleMap";
+
 const GettingThere =()=>{
     return(
         <>
@@ -8,6 +10,7 @@ const GettingThere =()=>{
             <h2>Cinema Location </h2>
             </div>
         </section>
+        <GoogleMap/>
 
 
         </>
