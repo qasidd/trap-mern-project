@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FILM_URL } from '../CONSTS.json';
-import { Input } from 'reactstrap';
 
 const NewBooking = (props) => {
 
@@ -10,6 +9,7 @@ const NewBooking = (props) => {
     const [selFilmName, setSelFilmName] = useState("");
     const [selFilmScreenings, setSelFilmScreenings] = useState([]);
     const [screening, setScreening] = useState("");
+    const [deluxe, setDeluxe] = useState(false);
     const [name, setName] = useState("");
     const [adults, setAdults] = useState(0);
     const [children, setChildren] = useState(0);
@@ -51,20 +51,33 @@ const NewBooking = (props) => {
                                 ))}
                             </select>
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="filmSelect">Screenings</label>
-                            <select
-                                class="form-control"
-                                onChange={({ target }) => { setScreening(target.value) }}
-                            >
-                                {
-                                    selFilmScreenings.length == 0 ?
-                                        (<option> - </option>) :
-                                        selFilmScreenings.map((screening, i) => (
-                                            <option key={i}>{new Date(screening).toUTCString()}</option>
-                                        ))
-                                }
-                            </select>
+                        <div className="form-row">
+                            <div className="form-group col-8">
+                                <label htmlFor="filmSelect">Screenings</label>
+                                <select
+                                    class="form-control"
+                                    onChange={({ target }) => { setScreening(target.value) }}
+                                >
+                                    {
+                                        selFilmScreenings.length == 0 ?
+                                            (<option> - </option>) :
+                                            selFilmScreenings.map((screening, i) => (
+                                                <option key={i}>{new Date(screening).toUTCString()}</option>
+                                            ))
+                                    }
+                                </select>
+                            </div>
+                            <div className="form-group col-4">
+                                <div className="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        name="deluxeCheck" 
+                                        id="deluxeCheck" 
+                                        className="form-check-input" 
+                                    />
+                                    <label htmlFor="deluxeCheck" className="form-check-label">Deluxe</label>
+                                </div>
+                            </div>
                         </div>
                         <div className="form-group">
                             <label htmlFor="nameInput">Name on booking</label>
@@ -76,28 +89,26 @@ const NewBooking = (props) => {
                                 onChange={({ target }) => { setName(target.value) }}
                             />
                         </div>
-                        <div className="form-group">
-                            <div className="row">
-                                <div className="col-6">
-                                    <label htmlFor="numOfAdultsInput">Adult(s)</label>
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        name="numOfAdultsInput"
-                                        id="numOfAdultsInput"
-                                        onChange={({ target }) => { setAdults(target.value) }}
-                                    />
-                                </div>
-                                <div className="col-6">
-                                    <label htmlFor="numOfChildrenInput">Child(ren)</label>
-                                    <input
-                                        type="number"
-                                        className="form-control"
-                                        name="numOfChildrenInput"
-                                        id="numOfChildrenInput"
-                                        onChange={({ target }) => { setChildren(target.value) }}
-                                    />
-                                </div>
+                        <div className="form-row">
+                            <div className="form-group col-6">
+                                <label htmlFor="numOfAdultsInput">Adult(s)</label>
+                                <input
+                                    type="number"
+                                    className="form-control"
+                                    name="numOfAdultsInput"
+                                    id="numOfAdultsInput"
+                                    onChange={({ target }) => { setAdults(target.value) }}
+                                />
+                            </div>
+                            <div className="form-group col-6">
+                                <label htmlFor="numOfChildrenInput">Child(ren)</label>
+                                <input
+                                    type="number"
+                                    className="form-control"
+                                    name="numOfChildrenInput"
+                                    id="numOfChildrenInput"
+                                    onChange={({ target }) => { setChildren(target.value) }}
+                                />
                             </div>
                         </div>
                         <div className="form-group">
@@ -119,7 +130,7 @@ const NewBooking = (props) => {
                     </div>
                 </div>
             </form>
-        </div>
+        </div >
     );
 
 }

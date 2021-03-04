@@ -1,10 +1,10 @@
 :root {
-    --main-bg-colour: #9B9898;
+    --main-bg-colour: #fafafa;
     --main-accent-colour: #FF6033;
     --main-accent-colour-dark: #c44824;
 }
 
-body {
+#root {
     background-color: var(--main-bg-colour);
 }
 
@@ -122,6 +122,8 @@ a {
 
 .bookingForm .form-control {
     border: 1px solid var(--main-accent-colour);
+    background-color: var(--main-bg-colour);
+    color: rgb(26, 26, 26);
 }
 
 .bookingForm .form-control:focus {
