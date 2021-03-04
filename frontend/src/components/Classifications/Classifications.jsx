@@ -13,11 +13,11 @@ import {
     NavLink,
 } from 'reactstrap';
 import classnames from 'classnames';
-import UniSymbol from '../resources/img/uni-symbol.png';
-import PgSymbol from '../resources/img/pg-symbol.png';
-import TwelveSymbol from '../resources/img/12-symbol.png';
-import FifteenSymbol from '../resources/img/15-symbol.png';
-import EighteenSymbol from '../resources/img/18-symbol.png';
+import UniSymbol from '../../resources/img/uni-symbol.png';
+import PgSymbol from '../../resources/img/pg-symbol.png';
+import TwelveSymbol from '../../resources/img/12-symbol.png';
+import FifteenSymbol from '../../resources/img/15-symbol.png';
+import EighteenSymbol from '../../resources/img/18-symbol.png';
 import ClassificationsRatingTab from './ClassificationsRatingTab';
 
 const Classifications = () => {
@@ -167,12 +167,8 @@ const Classifications = () => {
     )
 
     return (
-        <div className="classifications container">
-            <header className="row">
-                <div className="col">
-                    <h1 className="display-3">Classifications</h1>
-                </div>
-            </header>
+        <main className="mainContent container">
+            <h1 className="display-4">Classifications</h1>
             <div className="row">
                 <div className="col">
                     <p>Before they are released to the public, all films are given age ratings by the British
@@ -180,12 +176,12 @@ const Classifications = () => {
                         and families choose what is right for them and what to avoid.</p>
                     <p>There are five main ratings that the BBFC give out: U, PG, 12, 15 and 18.</p>
                     <p><em>*All the information below comes directly from the
-                        official <a href="https://www.bbfc.co.uk/">BBFC website</a></em></p>
+                        official <a href="https://www.bbfc.co.uk/" target="_blank">BBFC website</a></em></p>
                 </div>
             </div>
             <div className="row mt-2">
                 <div className="col">
-                    <h2 className="display-4">Ratings</h2>
+                    <h2>Ratings</h2>
                     <Nav tabs className="mt-3">
                         <NavItem>
                             <NavLink
@@ -285,7 +281,7 @@ const Classifications = () => {
                     </TabContent>
                 </div>
             </div>
-        </div >
+        </main>
     )
 };
 
