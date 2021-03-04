@@ -128,7 +128,7 @@ const Food=()=>{
                         <section>
                             <div className="container text-center">
                                 <h5>Contact Details</h5>
-                                <p>Telephone Number: 0161 876 2121 </p>
+                                <p>Telephone Number: 0161 876 3443 </p>
                                 <h6>Our Address:</h6>
                                 <p>Inside The Lowry, Manchester, Salford M50 3AZ</p>
                                 <div>
