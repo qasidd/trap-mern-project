@@ -16,7 +16,25 @@ const NewBooking = (props) => {
     const [children, setChildren] = useState(0);
     const [concessionInputArray, setConcessionInputArray] = useState([]);
     const [concessionInputArrayLength, setConcessionInputArrayLength] = useState(0);
+    const [concessions, setConcessions] = useState([]);
     const [total, setTotal] = useState(0.0);
+
+    let _concessions = [null];
+
+    const updateConcessionType = (index, value) => {
+        _concessions[index].type = value;
+        setConcessions(_concessions);
+    }
+
+    const updateConcessionsSize = (index, value) => {
+        _concessions[index].size = value;
+        setConcessions(_concessions);
+    }
+
+    const updateConcessionsQuantity = (index, value) => {
+        _concessions[index].quantity = value;
+        setConcessions(_concessions);
+    }
 
     useEffect(() => {
         axios.get(`${FILM_URL}/getAll/nowShowing`)
@@ -34,7 +52,20 @@ const NewBooking = (props) => {
 
     useEffect(() => {
         if (concessionInputArrayLength) {
-            setConcessionInputArray([...concessionInputArray, <ConcessionInput key={concessionInputArrayLength} />]);
+            setConcessionInputArray(
+                [...concessionInputArray, 
+                <ConcessionInput 
+                    key={concessionInputArrayLength} 
+                    index={concessionInputArrayLength}
+                    updateType={updateConcessionType}
+                    updateSize={updateConcessionsSize}
+                    updateQuantity={updateConcessionsQuantity}
+                />]
+            );
+            // TODO: push isn't adding a new object to _concessions array??
+            _concessions.push({"type": "popcorn", "size": "S", "quantity": 0})
+            console.log(_concessions);
+            setConcessions(_concessions);
         }
     }, [concessionInputArrayLength]);
 
@@ -46,6 +77,11 @@ const NewBooking = (props) => {
         setSelFilmObject(filmObject[0]);
         setSelFilmScreenings(filmObject[0].screenings);
     }
+
+    useEffect(() => {
+        const val = (adults * 8) + (children * 6);
+        setTotal(deluxe ? val * 1.5 : val);
+    }, [deluxe, adults, children])
 
     const handleSubmit = (event) => {
         event.preventDefault();

@@ -170,3 +170,7 @@ a {
     border-radius: 20px;
     color: white;
 }
+
+#bookingTotalDiv [type="submit"]:hover {
+    color: var(--main-accent-colour)
+}
