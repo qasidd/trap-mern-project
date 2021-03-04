@@ -2,11 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const createError = require('http-errors');
+const morgan = require('morgan')
 //instantiate my app
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
+app.use(morgan('tiny'))
 
 //importing all of methods
 const FilmRoute = require('./router/film.js');
@@ -15,6 +16,9 @@ app.use("/film",FilmRoute);
 
 const BookingRoute = require('./router/bookings.js')
 app.use("/bookings",BookingRoute)
+
+const ForumRoute = require('./router/forum')
+app.use("/forum",ForumRoute)
 //error handling
 app.use((req,res,next) => {
     next(createError(404, 'Resource not found'));
