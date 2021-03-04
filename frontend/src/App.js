@@ -2,10 +2,12 @@ import Classifications from './components/Classifications/Classifications';
 import ListingsGallery from './components/Galleries/ListingsGallery';
 import NewReleasesGallery from './components/Galleries/NewReleasesGallery';
 import OpeningTime from './components/Opening-Times/CinemaTime';
+import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 import './resources/App.css';
 import Screenparent from './Components/Screens/screenparent';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Discussionboard from './Components/pages/Discussionboard';
+
 function App() {
   return (
 
@@ -21,7 +23,6 @@ function App() {
     </Route>
     </Switch>
   </Router>
-
 
   );
 }
