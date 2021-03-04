@@ -3,6 +3,7 @@ import ListingsGallery from './components/Galleries/ListingsGallery';
 import NewReleasesGallery from './components/Galleries/NewReleasesGallery';
 import OpeningTime from './components/Opening-Times/CinemaTime';
 import './resources/App.css';
+import Screenparent from './Components/Screens/screenparent';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Discussionboard from './Components/pages/Discussionboard';
 function App() {
@@ -20,6 +21,7 @@ function App() {
     </Route>
     </Switch>
   </Router>
+
 
   );
 }
