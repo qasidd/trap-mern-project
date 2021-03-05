@@ -22,11 +22,13 @@ const film = model('film', FilmSchema)
 const bookingSchema = new Schema({
     name : String,
     movie_title : String,
-    screening : Date,
+    screening : String,
     nofseats : Number,
     adult : Number,
     child : Number,
-    concession : String
+    concession : [String],
+    total: Number,
+    paymentsuccess: Boolean
 });
  
 const booking = model('booking', bookingSchema)

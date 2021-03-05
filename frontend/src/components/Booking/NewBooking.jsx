@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FILM_URL } from '../CONSTS.json';
+import { FILM_URL, BOOKING_URL } from '../CONSTS.json';
 import ConcessionInput from './ConcessionInput';
 
 const NewBooking = (props) => {
@@ -15,59 +15,67 @@ const NewBooking = (props) => {
     const [adults, setAdults] = useState(0);
     const [children, setChildren] = useState(0);
     const [concessionInputArray, setConcessionInputArray] = useState([]);
-    const [concessionInputArrayLength, setConcessionInputArrayLength] = useState(0);
     const [concessions, setConcessions] = useState([]);
     const [total, setTotal] = useState(0.0);
 
-    let _concessions = [null];
+    // let _concessions = [];
 
     const updateConcessionType = (index, value) => {
-        _concessions[index].type = value;
-        setConcessions(_concessions);
+        // let _concessions = concessions;
+        // console.log(_concessions)
+        // let con = {..._concessions[index]};
+        // console.log(con);
+        // con.type = value;
+        // _concessions[index] = con;
+        // setConcessions(_concessions);
+
+        // setConcessions(conArray => {
+        //     console.log(conArray[index]);
+        //     conArray[index]['type'] = value;
+        // });
+
+        let tempArray = concessions.map((con, i) => {
+            if (i == index) {
+                return { ...con, ['type']: value };
+            } else {
+                return con;
+            }
+        });
+        setConcessions(tempArray);
+
+        // const elementsIndex = concessions.findIndex
+        //     (element => element.index === index);
+        // let con = [...concessions];
+        // con[elementsIndex] = { ...con[elementsIndex], type: value };
+        // setConcessions(con);
     }
 
     const updateConcessionsSize = (index, value) => {
-        _concessions[index].size = value;
-        setConcessions(_concessions);
+        setConcessions(conArray => {
+            conArray[index].size = value;
+        });
     }
 
     const updateConcessionsQuantity = (index, value) => {
-        _concessions[index].quantity = value;
-        setConcessions(_concessions);
+        setConcessions(conArray => {
+            conArray[index].quantity = value;
+        });
     }
-
-    useEffect(() => {
-        axios.get(`${FILM_URL}/getAll/nowShowing`)
-            .then((res) => {
-                setFilmList(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }, []);
 
     const addConcessionInput = () => {
-        setConcessionInputArrayLength(concessionInputArrayLength + 1);
+        setConcessionInputArray(
+            [...concessionInputArray,
+            <ConcessionInput
+                key={concessionInputArray.length}
+                index={concessionInputArray.length}
+                updateType={updateConcessionType}
+                updateSize={updateConcessionsSize}
+                updateQuantity={updateConcessionsQuantity}
+            />]
+        );
+        const newCon = { "index": concessionInputArray.length, "type": "popcorn", "size": "S", "quantity": 0 };
+        setConcessions((conArray) => [...conArray, newCon]);
     }
-
-    useEffect(() => {
-        if (concessionInputArrayLength) {
-            setConcessionInputArray(
-                [...concessionInputArray, 
-                <ConcessionInput 
-                    key={concessionInputArrayLength} 
-                    index={concessionInputArrayLength}
-                    updateType={updateConcessionType}
-                    updateSize={updateConcessionsSize}
-                    updateQuantity={updateConcessionsQuantity}
-                />]
-            );
-            // TODO: push isn't adding a new object to _concessions array??
-            _concessions.push({"type": "popcorn", "size": "S", "quantity": 0})
-            console.log(_concessions);
-            setConcessions(_concessions);
-        }
-    }, [concessionInputArrayLength]);
 
     const selectedFilm = ({ target }) => {
         setSelFilmName(target.value);
@@ -79,12 +87,42 @@ const NewBooking = (props) => {
     }
 
     useEffect(() => {
+        axios.get(`${FILM_URL}/getAll/nowShowing`)
+            .then((res) => {
+                setFilmList(res.data);
+                // selectedFilm({ target: { value: filmList[0].title } });
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    useEffect(() => {
         const val = (adults * 8) + (children * 6);
         setTotal(deluxe ? val * 1.5 : val);
     }, [deluxe, adults, children])
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        const newBookingBody = {
+            "name": name,
+            "movie_title": selFilmName,
+            "screening": screening,
+            "nofseats": adults + children,
+            "adult": adults,
+            "child": children,
+            "concession": [],
+            "total": total,
+            "paymentsuccess": false
+        }
+
+        axios.post(`${BOOKING_URL}/create`, newBookingBody)
+            .then((res) => {
+                console.log(res);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 
     return (
@@ -96,7 +134,7 @@ const NewBooking = (props) => {
                         <div className="form-group">
                             <label htmlFor="filmSelect">Film</label>
                             <select
-                                class="form-control form-control-lg"
+                                className="form-control form-control-lg"
                                 onChange={selectedFilm}
                             >
                                 {filmList.map(({ title }, i) => (
@@ -108,7 +146,7 @@ const NewBooking = (props) => {
                             <div className="form-group col-8">
                                 <label htmlFor="filmSelect">Screenings</label>
                                 <select
-                                    class="form-control"
+                                    className="form-control"
                                     onChange={({ target }) => { setScreening(target.value) }}
                                 >
                                     {
@@ -121,9 +159,9 @@ const NewBooking = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-4">
-                                <label htmlFor="filmSelect">Deluxe</label>
+                                <label htmlFor="filmSelect">Deluxe?</label>
                                 <select
-                                    class="form-control"
+                                    className="form-control"
                                     onChange={({ target }) => setDeluxe(target.value === "Yes" ? true : false)}
                                 >
                                     <option value="No">No</option>
@@ -143,7 +181,7 @@ const NewBooking = (props) => {
                         </div>
                         <div className="form-row">
                             <div className="form-group col-6">
-                                <label htmlFor="numOfAdultsInput">Adult(s)</label>
+                                <label htmlFor="numOfAdultsInput">Adult(s) <small><em>£8, £12 deluxe</em></small></label>
                                 <input
                                     type="number"
                                     className="form-control"
@@ -153,7 +191,7 @@ const NewBooking = (props) => {
                                 />
                             </div>
                             <div className="form-group col-6">
-                                <label htmlFor="numOfChildrenInput">Child(ren)</label>
+                                <label htmlFor="numOfChildrenInput">Child(ren) <small><em>£6, £9 deluxe</em></small></label>
                                 <input
                                     type="number"
                                     className="form-control"
@@ -164,10 +202,23 @@ const NewBooking = (props) => {
                             </div>
                         </div>
                         <label>Concession(s)</label>
+                        <div className={concessionInputArray.length === 0? "d-none" : "row"}>
+                            <div className="col-6">
+                                <label>Type</label>
+                            </div>
+                            <div className="col-4">
+                                <label>Size</label>
+                            </div>
+                            <div className="col-2">
+                                <label>Qty</label>
+                            </div>
+                        </div>
                         {concessionInputArray.map((input) => (input))}
+
                         <div className="form-row">
                             <div className="col-12">
                                 <button
+                                    type="button"
                                     className="btn btn-outline-accent"
                                     onClick={addConcessionInput}
                                 >

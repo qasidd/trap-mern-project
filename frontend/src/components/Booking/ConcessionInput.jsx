@@ -1,15 +1,15 @@
 import { useState } from 'react';
 
-const ConcessionInput = ({ index, concessions, updateType, updateSize, updateQuantity }) => {
+const ConcessionInput = ({ index, updateType, updateSize, updateQuantity }) => {
 
     return (
         <div className="form-row mb-2">
             <div className="col-6">
-                <select 
+                <select
                     name="concessionTypeSelect"
-                    id="concessionTypeSelect" 
+                    id="concessionTypeSelect"
                     className="form-control"
-                    onChange={({target}) => { updateType(index, target.value) }}
+                    onChange={({ target }) => { updateType(index, target.value) }}
                 >
                     <option value="Popcorn">Popcorn</option>
                     <option value="Drink">Drink</option>
@@ -17,11 +17,11 @@ const ConcessionInput = ({ index, concessions, updateType, updateSize, updateQua
                 </select>
             </div>
             <div className="col-4">
-                <select 
-                    name="concessionSizeSelect" 
-                    id="concessionSizeSelect" 
+                <select
+                    name="concessionSizeSelect"
+                    id="concessionSizeSelect"
                     className="form-control"
-                    onChange={({target}) => { updateSize(index, target.value) }}
+                    onChange={({ target }) => { updateSize(index, target.value) }}
                 >
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -34,7 +34,8 @@ const ConcessionInput = ({ index, concessions, updateType, updateSize, updateQua
                     name="concessionQuantityInput"
                     id="concessionQuantityInput"
                     className="form-control"
-                    onChange={({target}) => { updateQuantity(index, target.value) }}
+                    value="0"
+                    onChange={({ target }) => { updateQuantity(index, target.value) }}
                 />
             </div>
         </div>
