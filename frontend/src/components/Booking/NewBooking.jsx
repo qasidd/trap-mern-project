@@ -18,6 +18,13 @@ const NewBooking = (props) => {
     const [concessions, setConcessions] = useState([]);
     const [total, setTotal] = useState(0.0);
 
+    // validation states
+    // const [blankFilm, setBlankFilm] = useState(true);
+    // const [blankScreening, setBlankScreening] = useState(true);
+    // const [blankName, setBlankName] = useState(true);
+    // const [blankSeats, setBlankSeats] = useState(true);
+    const [invalidForm, setInvalidForm] = useState(false);
+
     // let _concessions = [];
 
     const updateConcessionType = (index, value) => {
@@ -102,8 +109,7 @@ const NewBooking = (props) => {
         setTotal(deluxe ? val * 1.5 : val);
     }, [deluxe, adults, children])
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const createBooking = () => {
         const newBookingBody = {
             "name": name,
             "movie_title": selFilmName,
@@ -125,6 +131,32 @@ const NewBooking = (props) => {
             });
     }
 
+    const isBlankFilm = () => {
+        return selFilmName === "";
+    }
+
+    const isBlankScreening = () => {
+        return screening === "";
+    }
+
+    const isBlankName = () => {
+        return name === "";
+    }
+
+    const isBlankSeats = () => {
+        return (adults + children) === 0
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (!isBlankFilm() && !isBlankScreening() && isBlankName() && !isBlankSeats()) {
+            setInvalidForm(false);
+            createBooking();
+        } else {
+            setInvalidForm(true);
+        }
+    }
+
     return (
         <div className="mainContent container">
             <h1 className="display-4">New Booking</h1>
@@ -134,19 +166,22 @@ const NewBooking = (props) => {
                         <div className="form-group">
                             <label htmlFor="filmSelect">Film</label>
                             <select
-                                className="form-control form-control-lg"
+                                className={isBlankFilm() && invalidForm ? "form-control form-control-lg is-invalid" : "form-control form-control-lg"}
                                 onChange={selectedFilm}
                             >
                                 {filmList.map(({ title }, i) => (
                                     <option key={i}>{title}</option>
                                 ))}
                             </select>
+                            <div className={isBlankFilm() && invalidForm ? "invalid-feedback" : "d-none"}>
+                                Please select a film.
+                            </div>
                         </div>
                         <div className="form-row">
                             <div className="form-group col-8">
                                 <label htmlFor="filmSelect">Screenings</label>
                                 <select
-                                    className="form-control"
+                                    className={isBlankScreening() && invalidForm ? "form-control is-invalid" : "form-control"}
                                     onChange={({ target }) => { setScreening(target.value) }}
                                 >
                                     {
@@ -157,6 +192,9 @@ const NewBooking = (props) => {
                                             ))
                                     }
                                 </select>
+                                <div className={isBlankScreening() && invalidForm ? "invalid-feedback" : "d-none"}>
+                                    Please select a screening.
+                                </div>
                             </div>
                             <div className="form-group col-4">
                                 <label htmlFor="filmSelect">Deluxe?</label>
@@ -173,18 +211,21 @@ const NewBooking = (props) => {
                             <label htmlFor="nameInput">Name on booking</label>
                             <input
                                 type="text"
-                                className="form-control"
+                                className={isBlankName() && invalidForm ? "form-control is-invalid" : "form-control"}
                                 name="nameInput"
                                 id="nameInput"
                                 onChange={({ target }) => { setName(target.value) }}
                             />
+                            <div className={isBlankName() && invalidForm ? "invalid-feedback" : "d-none"}>
+                                Please provide a name for the booking.
+                            </div>
                         </div>
                         <div className="form-row">
                             <div className="form-group col-6">
                                 <label htmlFor="numOfAdultsInput">Adult(s) <small><em>£8, £12 deluxe</em></small></label>
                                 <input
                                     type="number"
-                                    className="form-control"
+                                    className={isBlankSeats() && invalidForm ? "form-control is-invalid" : "form-control"}
                                     name="numOfAdultsInput"
                                     id="numOfAdultsInput"
                                     onChange={({ target }) => { setAdults(target.value) }}
@@ -194,7 +235,7 @@ const NewBooking = (props) => {
                                 <label htmlFor="numOfChildrenInput">Child(ren) <small><em>£6, £9 deluxe</em></small></label>
                                 <input
                                     type="number"
-                                    className="form-control"
+                                    className={isBlankSeats() && invalidForm ? "form-control is-invalid" : "form-control"}
                                     name="numOfChildrenInput"
                                     id="numOfChildrenInput"
                                     onChange={({ target }) => { setChildren(target.value) }}
@@ -202,7 +243,7 @@ const NewBooking = (props) => {
                             </div>
                         </div>
                         <label>Concession(s)</label>
-                        <div className={concessionInputArray.length === 0? "d-none" : "row"}>
+                        <div className={concessionInputArray.length === 0 ? "d-none" : "row"}>
                             <div className="col-6">
                                 <label>Type</label>
                             </div>
