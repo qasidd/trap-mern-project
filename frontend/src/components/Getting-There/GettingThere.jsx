@@ -1,9 +1,7 @@
 'use strict';
 
-import { Card } from 'react-bootstrap';
 
 import General from "./General";
-import MenuBar from "./MenuBar";
 import TopBar from "./TopBar";
 import Public from "./Public";
 
@@ -24,8 +22,7 @@ const GettingThere = () => {
             {/* <TopBar/> */}
             <General />
              <Public/>
-        
-            {/* <MenuBar /> */}
+    
         </>
     )
 }

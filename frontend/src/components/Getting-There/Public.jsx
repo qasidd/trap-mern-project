@@ -7,6 +7,7 @@ const Public = () => {
 
     return (
         <>
+        <section>
             <Card>
                 <h6>Address 1:</h6>
                 <p>5th Floor Anchorage, 1
@@ -19,6 +20,10 @@ const Public = () => {
             </Card>
             <br></br>
 
+            <div>
+                <h4>Public Transport Routes </h4>
+            </div>
+
             <Card>
                 <h6>Tram Directions</h6>
                 <p>Tram Directions from the city center</p>
@@ -28,7 +33,7 @@ const Public = () => {
                 <p>Other Routes: Please exchange at cornbrook, if you are coming from East Didsbury, Trafford, Altricham and Chorlton</p>
             </Card>
             <br></br>
-
+            
             <Card>
                 <h6>Bus Directions:</h6>
                 <p>From the piccadilly center, take the bus 33 toward worsely </p>
@@ -36,13 +41,16 @@ const Public = () => {
                 <p>Other buses that travel here: 33, 29, 79, 53 and 50 </p>
             </Card>
             <br></br>
-
             <Card>
                 <h5>Car Park Details</h5>
                 <h6>Parking Center Address:</h6>
                 <p>Anchorage, Anchorage Quay, Salford, Quays M50 3XE</p>
                 <p>10 minute walk from the cinema</p>
+                <p>There's no car parking for delegates, the nearest carpark is U Swim Carpark.
+                However there's 10 spaces for permanent staff,
+                    call 01613932270 and ask for Hannah who would be happy to assist.</p>
             </Card>
+            </section>
         </>
     );
 
