@@ -1,4 +1,5 @@
 import Classifications from './components/Classifications/Classifications';
+import ContactForm from './components/Contactsus/contactform';
 import ListingsGallery from './components/Galleries/ListingsGallery';
 import NewReleasesGallery from './components/Galleries/NewReleasesGallery';
 import OpeningTime from './components/Opening-Times/CinemaTime';
@@ -9,7 +10,7 @@ function App() {
     <div className="App">
       {/* <Classifications /> */}
       {/* <ListingsGallery /> */}
-      <NewReleasesGallery />
+      <ContactForm />
       {/* <OpeningTime/> */}
     </div>
   );

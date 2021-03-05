@@ -1,60 +1,25 @@
+
+import CreateContact from './createcontact'
+import { useState } from "react";
+
+
 const ContactForm = () =>{
-return(
-    <>
-    <Card>
-<CardBody>
-<CardTitle>Contact us Form</CardTitle>
-<form onSubmit={create}>
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                placeholder="Fullname"
-                                value={username}
-                                onChange={({target}) => setName(target.value)}
-                            />
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                placeholder="Email"
-                                value={email}
-                                onChange={({target}) => setEmail(target.value)}
-                            />
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                placeholder="Subject"
-                                value={subject}
-                                onChange={({target}) => setSubject(target.value)}
-                            />
-                            <input 
-                                type="text" 
-                                className="form-control" 
-                                placeholder="Message"
-                                value={message}
-                                onChange={({target}) => setMessage(target.value)}
-                            />
-                            
-                            <br/>
-                            <button type="submit" className="btn btn-outline-success col-md-12">Send</button>
-                        </form>
+    const [msg, setMsg] = useState('');
 
+    const trigger = (data) => {
+        setMsg(data);
+    }
 
+    return (
 
-
-
-
-
-
-
-
-</CardBody>
-    </Card>
-    
-    
-    </>
-
-)
-
+        <div className="row">
+            <div className="col-md-3">
+                <CreateContact trigger={trigger} />
+            </div>
+            
+            </div>
+        
+    )
 
 
 

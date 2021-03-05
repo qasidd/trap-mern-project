@@ -1,4 +1,10 @@
-const CreateContact = () =>{
+import { Card, CardBody, CardTitle } from "reactstrap"
+import axios from "axios";
+import { useState } from "react";
+
+
+
+const CreateContact = ({trigger}) =>{
  // states for form
  const [name, setName] = useState('');
  const [email, setEmail] = useState('');
@@ -10,7 +16,7 @@ const CreateContact = () =>{
 
  const create = (e) => {
      e.preventDefault(); 
-     axios.post(`${Forum_URL}/create`, {name,email,subject,message})
+     axios.post(`http://localhost:5019/email`, {name,email,subject,message})
          .then((res) => {
              // console.log(res.data);
              clearValues();
@@ -43,7 +49,7 @@ return(<>
                                 type="text" 
                                 className="form-control" 
                                 placeholder="Fullname"
-                                value={username}
+                                value={name}
                                 onChange={({target}) => setName(target.value)}
                             />
                             <input 
@@ -91,3 +97,4 @@ return(<>
 
 
 }
+export default CreateContact
