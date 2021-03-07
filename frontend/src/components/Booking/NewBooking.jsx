@@ -17,56 +17,14 @@ const NewBooking = (props) => {
     const [concessionInputArray, setConcessionInputArray] = useState([]);
     const [concessions, setConcessions] = useState([]);
     const [total, setTotal] = useState(0.0);
-
-    // validation states
-    // const [blankFilm, setBlankFilm] = useState(true);
-    // const [blankScreening, setBlankScreening] = useState(true);
-    // const [blankName, setBlankName] = useState(true);
-    // const [blankSeats, setBlankSeats] = useState(true);
     const [invalidForm, setInvalidForm] = useState(false);
 
-    // let _concessions = [];
-
-    const updateConcessionType = (index, value) => {
-        // let _concessions = concessions;
-        // console.log(_concessions)
-        // let con = {..._concessions[index]};
-        // console.log(con);
-        // con.type = value;
-        // _concessions[index] = con;
-        // setConcessions(_concessions);
-
-        // setConcessions(conArray => {
-        //     console.log(conArray[index]);
-        //     conArray[index]['type'] = value;
-        // });
-
-        let tempArray = concessions.map((con, i) => {
-            if (i == index) {
-                return { ...con, ['type']: value };
-            } else {
-                return con;
-            }
-        });
-        setConcessions(tempArray);
-
-        // const elementsIndex = concessions.findIndex
-        //     (element => element.index === index);
-        // let con = [...concessions];
-        // con[elementsIndex] = { ...con[elementsIndex], type: value };
-        // setConcessions(con);
-    }
-
-    const updateConcessionsSize = (index, value) => {
-        setConcessions(conArray => {
-            conArray[index].size = value;
-        });
-    }
-
-    const updateConcessionsQuantity = (index, value) => {
-        setConcessions(conArray => {
-            conArray[index].quantity = value;
-        });
+    const updateConcession = (index, key, value) => {
+        setConcessions((prevConcessions) => {
+            let _concessions = [...prevConcessions];
+            _concessions[index][key] = value;
+            return _concessions;
+        })
     }
 
     const addConcessionInput = () => {
@@ -75,12 +33,10 @@ const NewBooking = (props) => {
             <ConcessionInput
                 key={concessionInputArray.length}
                 index={concessionInputArray.length}
-                updateType={updateConcessionType}
-                updateSize={updateConcessionsSize}
-                updateQuantity={updateConcessionsQuantity}
+                updateConcession={updateConcession}
             />]
         );
-        const newCon = { "index": concessionInputArray.length, "type": "popcorn", "size": "S", "quantity": 0 };
+        const newCon = { "type": "Popcorn", "size": "S", "quantity": 0 };
         setConcessions((conArray) => [...conArray, newCon]);
     }
 
@@ -97,7 +53,6 @@ const NewBooking = (props) => {
         axios.get(`${FILM_URL}/getAll/nowShowing`)
             .then((res) => {
                 setFilmList(res.data);
-                // selectedFilm({ target: { value: filmList[0].title } });
             })
             .catch((err) => {
                 console.log(err);
@@ -149,7 +104,7 @@ const NewBooking = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (!isBlankFilm() && !isBlankScreening() && isBlankName() && !isBlankSeats()) {
+        if (!isBlankFilm() && !isBlankScreening() && !isBlankName() && !isBlankSeats()) {
             setInvalidForm(false);
             createBooking();
         } else {

@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-const ConcessionInput = ({ index, updateType, updateSize, updateQuantity }) => {
+const ConcessionInput = ({ index, updateConcession }) => {
 
     return (
         <div className="form-row mb-2">
@@ -9,7 +7,7 @@ const ConcessionInput = ({ index, updateType, updateSize, updateQuantity }) => {
                     name="concessionTypeSelect"
                     id="concessionTypeSelect"
                     className="form-control"
-                    onChange={({ target }) => { updateType(index, target.value) }}
+                    onChange={({ target }) => { updateConcession(index, 'type', target.value) }}
                 >
                     <option value="Popcorn">Popcorn</option>
                     <option value="Drink">Drink</option>
@@ -21,7 +19,7 @@ const ConcessionInput = ({ index, updateType, updateSize, updateQuantity }) => {
                     name="concessionSizeSelect"
                     id="concessionSizeSelect"
                     className="form-control"
-                    onChange={({ target }) => { updateSize(index, target.value) }}
+                    onChange={({ target }) => { updateConcession(index, 'size', target.value) }}
                 >
                     <option value="S">S</option>
                     <option value="M">M</option>
@@ -35,7 +33,7 @@ const ConcessionInput = ({ index, updateType, updateSize, updateQuantity }) => {
                     id="concessionQuantityInput"
                     className="form-control"
                     value="0"
-                    onChange={({ target }) => { updateQuantity(index, target.value) }}
+                    onChange={({ target }) => { updateConcession(index, 'quantity', target.value) }}
                 />
             </div>
         </div>
