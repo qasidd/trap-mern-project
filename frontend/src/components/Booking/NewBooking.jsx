@@ -7,14 +7,13 @@ const NewBooking = (props) => {
 
     const [filmList, setFilmList] = useState([]);
     const [selFilmObject, setSelFilmObject] = useState(null);
-    const [selFilmName, setSelFilmName] = useState("");
     const [selFilmScreenings, setSelFilmScreenings] = useState([]);
     const [screening, setScreening] = useState("");
     const [deluxe, setDeluxe] = useState(false);
     const [name, setName] = useState("");
     const [adults, setAdults] = useState(0);
     const [children, setChildren] = useState(0);
-    const [concessionInputArray, setConcessionInputArray] = useState([]);
+    const [concessionInputs, setConcessionInputs] = useState([]);
     const [concessions, setConcessions] = useState([]);
     const [total, setTotal] = useState(0.0);
     const [invalidForm, setInvalidForm] = useState(false);
@@ -29,11 +28,11 @@ const NewBooking = (props) => {
     }
 
     const addConcessionInput = () => {
-        setConcessionInputArray(
-            [...concessionInputArray,
+        setConcessionInputs(
+            [...concessionInputs,
             <ConcessionInput
-                key={concessionInputArray.length}
-                index={concessionInputArray.length}
+                key={concessionInputs.length}
+                index={concessionInputs.length}
                 updateConcession={updateConcession}
             />]
         );
@@ -42,7 +41,6 @@ const NewBooking = (props) => {
     }
 
     const selectedFilm = ({ target }) => {
-        setSelFilmName(target.value);
         const filmObject = filmList.filter((film) => {
             return film.title === target.value;
         })
@@ -77,12 +75,11 @@ const NewBooking = (props) => {
     }, [deluxe, adults, children, concessions])
 
     const createBooking = () => {
-        console.log("createBooking triggered");
-
         const newBookingBody = {
             "name": name,
-            "movie_title": selFilmName,
+            "movie_title": selFilmObject.title,
             "screening": screening,
+            "deluxe": deluxe,
             "nofseats": parseInt(adults) + parseInt(children),
             "adult": adults,
             "child": children,
@@ -101,7 +98,7 @@ const NewBooking = (props) => {
     }
 
     const isBlankFilm = () => {
-        return selFilmName === "";
+        return selFilmObject === null;
     }
 
     const isBlankScreening = () => {
@@ -212,7 +209,7 @@ const NewBooking = (props) => {
                             </div>
                         </div>
                         <label>Concession(s)</label>
-                        <div className={concessionInputArray.length === 0 ? "d-none" : "row"}>
+                        <div className={concessionInputs.length === 0 ? "d-none" : "row"}>
                             <div className="col-6">
                                 <label>Type</label>
                             </div>
@@ -223,7 +220,7 @@ const NewBooking = (props) => {
                                 <label>Qty</label>
                             </div>
                         </div>
-                        {concessionInputArray.map((input) => (input))}
+                        {concessionInputs.map((input) => (input))}
 
                         <div className="form-row">
                             <div className="col-12">

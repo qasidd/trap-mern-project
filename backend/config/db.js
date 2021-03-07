@@ -23,6 +23,7 @@ const bookingSchema = new Schema({
     name: String,
     movie_title: String,
     screening: String,
+    deluxe: Boolean,
     nofseats: Number,
     adult: Number,
     child: Number,
