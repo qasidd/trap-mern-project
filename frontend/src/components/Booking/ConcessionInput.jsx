@@ -32,7 +32,6 @@ const ConcessionInput = ({ index, updateConcession }) => {
                     name="concessionQuantityInput"
                     id="concessionQuantityInput"
                     className="form-control"
-                    value="0"
                     onChange={({ target }) => { updateConcession(index, 'quantity', target.value) }}
                 />
             </div>

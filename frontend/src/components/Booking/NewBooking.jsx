@@ -20,6 +20,7 @@ const NewBooking = (props) => {
     const [invalidForm, setInvalidForm] = useState(false);
 
     const updateConcession = (index, key, value) => {
+
         setConcessions((prevConcessions) => {
             let _concessions = [...prevConcessions];
             _concessions[index][key] = value;
@@ -60,19 +61,32 @@ const NewBooking = (props) => {
     }, []);
 
     useEffect(() => {
-        const val = (adults * 8) + (children * 6);
-        setTotal(deluxe ? val * 1.5 : val);
-    }, [deluxe, adults, children])
+        let val = 0;
+        val = (adults * 8) + (children * 6);
+        val = deluxe ? val * 1.5 : val;
+        concessions.forEach((con) => {
+            if (con.type.toLowerCase() === "popcorn") {
+                val = val + (con.quantity) * (con.size === "L" ? 5.4 : con.size === "M" ? 4.9 : 4.5);
+            } else if (con.type.toLowerCase() === "drink") {
+                val = val + (con.quantity) * (con.size === "L" ? 3.6 : con.size === "M" ? 3.25 : 2.95);
+            } else {
+                val = val + (con.quantity) * (con.size === "L" ? 6 : con.size === "M" ? 5.6 : 5.2);
+            }
+        });
+        setTotal(val);
+    }, [deluxe, adults, children, concessions])
 
     const createBooking = () => {
+        console.log("createBooking triggered");
+
         const newBookingBody = {
             "name": name,
             "movie_title": selFilmName,
             "screening": screening,
-            "nofseats": adults + children,
+            "nofseats": parseInt(adults) + parseInt(children),
             "adult": adults,
             "child": children,
-            "concession": [],
+            "concessions": concessions,
             "total": total,
             "paymentsuccess": false
         }
