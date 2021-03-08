@@ -1,5 +1,3 @@
-'use strict';
-
 // content references:
 // https://www.bbfc.co.uk/
 // https://www.madeformums.com/school-and-family/film-classifications-what-they-mean/
@@ -176,7 +174,7 @@ const Classifications = () => {
                         and families choose what is right for them and what to avoid.</p>
                     <p>There are five main ratings that the BBFC give out: U, PG, 12, 15 and 18.</p>
                     <p><em>*All the information below comes directly from the
-                        official <a href="https://www.bbfc.co.uk/" target="_blank">BBFC website</a></em></p>
+                        official <a href="https://www.bbfc.co.uk/" target="_blank" rel="noreferrer">BBFC website</a></em></p>
                 </div>
             </div>
             <div className="row mt-2">

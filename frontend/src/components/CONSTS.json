@@ -1,5 +1,5 @@
 {
-    "Forum_URL":"http://localhost:5019/forum",
-    "FILM_URL": "http://localhost:5019/film"
-
+    "FILM_URL": "http://localhost:5019/film",
+    "BOOKING_URL": "http://localhost:5019/bookings",
+    "Forum_URL":"http://localhost:5019/forum"
 }
