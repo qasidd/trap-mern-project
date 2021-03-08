@@ -6,11 +6,11 @@ return(
     <>
 
     <Link to ="/">Home</Link>
-    <Link to ="/about">Places to Go</Link>
-    <Link to ="/">Bookings</Link>
-    <Link to ="/about">Movies</Link>
-    <Link to ="/">About</Link>
-    <Link to ="/about">Contact Us</Link>
+    <Link to ="/p2go">Places to Go</Link>
+    <Link to ="/bookings">Bookings</Link>
+    <Link to ="/movies">Movies</Link>
+    <Link to ="/about">About</Link>
+    <Link to ="/Contact Us">Contact Us</Link>
     </>
 
 )

@@ -6,16 +6,22 @@ import OpeningTime from './components/Opening-Times/CinemaTime';
 import './resources/App.css';
 import {Link} from 'react-router-dom';
 import Nav from "./components/Routing/Nav";
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import About from './components/About/About';
 
 function App() {
   return (
     <div className="App">
       <Router>
       <Nav/>
-      <Route path="/">
+      <Switch>
+      <Route path="/" exact> 
         <Home/>
       </Route>
+      <Route path="/about">
+        <About/>
+      </Route>
+      </Switch>
       </Router>
       {/*<Classifications /> */}
       {/* <ListingsGallery /> */}
