@@ -7,6 +7,7 @@ import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 
 import NewBooking from './components/Booking/NewBooking';
 import './resources/App.css';
+import Search from './components/SearchBar/Search';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       {/* <PlacesToGo/> */}
       {/* <GettingThere/>
       <NewBooking /> */}
-      
+      <Search/>
     </div>
   );
 }
