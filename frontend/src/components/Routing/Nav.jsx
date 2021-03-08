@@ -5,12 +5,16 @@ const Nav = () => {
 return(
     <>
 
-    <Link to ="/">Home</Link>
-    <Link to ="/p2go">Places to Go</Link>
-    <Link to ="/bookings">Bookings</Link>
-    <Link to ="/movies">Movies</Link>
-    <Link to ="/about">About</Link>
-    <Link to ="/Contact Us">Contact Us</Link>
+    <Link to ="/" className="btn btn-outline-info">Home</Link>
+    <Link to ="/" className="btn btn-outline-info"> Gallery</Link>
+    <Link to ="/" className="btn btn-outline-info">Opening Times</Link>
+    <Link to ="/" className="btn btn-outline-info">Classifications</Link>
+    <Link to ="/" className="btn btn-outline-info">Screens</Link>
+    <Link to ="/" className="btn btn-outline-info">Bookings</Link>
+    <Link to ="/" className="btn btn-outline-info">Payments</Link>
+    <Link to ="/" className="btn btn-outline-info">Location</Link>
+    <Link to ="/about" className="btn btn-outline-info">About</Link>
+    <Link to ="/" className="btn btn-outline-info">Contact</Link>
     </>
 
 )
