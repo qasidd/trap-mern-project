@@ -22,6 +22,7 @@ const film = model('film', FilmSchema)
 const bookingSchema = new Schema({
     name: String,
     movie_title: String,
+    poster: String,
     screening: String,
     deluxe: Boolean,
     nofseats: Number,

@@ -24,8 +24,10 @@ router.get("/get/:id", (req, res, next) => {
 
 router.post("/create", (req, res, next) => {
     const Order = new booking(req.body);
-    Order.save().then((booking) => {
-            res.status(201).send(`${booking.name} has been added successfully!`)
+    Order.save()
+        .then((booking) => {
+            // res.status(201).send(`${booking.name} has been added successfully!`);
+            res.status(201).send(booking);
         })
         .catch((err) => next(err));
 

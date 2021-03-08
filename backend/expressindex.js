@@ -10,11 +10,14 @@ app.use(bodyParser.json());
 
 //importing all of methods
 const FilmRoute = require('./router/film.js');
-
 app.use("/film",FilmRoute);
 
-const BookingRoute = require('./router/bookings.js')
-app.use("/bookings",BookingRoute)
+const BookingRoute = require('./router/bookings.js');
+app.use("/bookings",BookingRoute);
+
+const StripeRoute = require('./router/payments.js');
+app.use("/stripe", StripeRoute);
+
 //error handling
 app.use((req,res,next) => {
     next(createError(404, 'Resource not found'));

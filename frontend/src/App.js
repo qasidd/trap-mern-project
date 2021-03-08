@@ -1,9 +1,12 @@
+import './resources/App.css';
+
 import Classifications from './components/Classifications/Classifications';
 import ListingsGallery from './components/Galleries/ListingsGallery';
 import NewReleasesGallery from './components/Galleries/NewReleasesGallery';
 import OpeningTime from './components/Opening-Times/CinemaTime';
 import NewBooking from './components/Booking/NewBooking';
-import './resources/App.css';
+import CardForm from './components/Payments/CardForm';
+import PaymentForm from './components/Payments/PaymentForm';
 
 function App() {
   return (
@@ -13,6 +16,8 @@ function App() {
       {/* <NewReleasesGallery /> */}
       {/* <OpeningTime/> */}
       <NewBooking />
+      {/* <PaymentForm /> */}
+      {/* <CardForm /> */}
     </div>
   );
 }

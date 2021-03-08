@@ -19,13 +19,16 @@ const SubmitPayment = ({ handleClick }) => (
       </button>
     </section>
 );
+
 const Message = ({ message }) => (
     <section>
         <p>{message}</p>
     </section>
 );
+
 export default function App() {
     const [message, setMessage] = useState("");
+
     useEffect(() => {
 
         const query = new URLSearchParams(window.location.search);
@@ -38,6 +41,7 @@ export default function App() {
             );
         }
     }, []);
+
     const handleClick = async (event) => {
         const stripe = await stripePromise;
         const response = await fetch("/create-checkout-session", {
@@ -52,6 +56,7 @@ export default function App() {
 
         }
     };
+    
     return message ? (
         <Message message={message} />
     ) : (
