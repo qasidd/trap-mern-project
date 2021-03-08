@@ -14,7 +14,6 @@ The information below are the required software needed to host this project on y
 Check the download section of the README, to install the neccessary software by following the weblinks.
 
 The required software:
-
 - **Version Control System: Git**
 - **GitHub Account**
 - **Postman**
@@ -65,18 +64,37 @@ Please feel free to contribute by adding new features to this project:
 ## Deployment/Running The Application
 As mention before the backend is written using Node.js and Express with some intergation from Mongo DB. Before running the whole application make sure the backend is connected to Mongo database. 
 
-To run the backend:
+**To run the backend:**
+
 ```bash
-cd backend
+-cd backend
 npm install
 npm start
 ```
 
+*Note:* 
+- *The application will open on a new server port i.e. http://localhost:3000/*
+- *It is crucial to use the command `npm install` or `npm i` to have all the node modules, package-lock.json and package.json files added to the local machine*
+
+Most of the frontend is built using React with CSS and other packages such as reactstrap. 
+
+**To run the frontend:**
+
+```bash
+-cd frontend
+npm install
+npm start
+```
+
+*Note:* 
+- *The application will open on a new server port i.e. http://localhost:3001/*
+- *It is crucial to use the command `npm install` or `npm i` to have all the node modules, package-lock.json and package.json files added to the local machine*
+
+
 ### Built With
- * Full MERN stack  
+ - Full MERN stack  
 
 ### Authors 
-
  - Siddhartha Gurung (Owner of repository)
  - Waleed Tahir
  - Hamza Pervez
@@ -87,8 +105,8 @@ npm start
 This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
 
 ### References
- - **React Strap/BootStrap for React**. Available at: https://react-bootstrap.github.io/  
- - **React Semantic UI**. Available at: https://react.semantic-ui.com/
+ - **React Strap/BootStrap for React**. *Available at: https://react-bootstrap.github.io/* 
+ - **React Semantic UI**. *Available at: https://react.semantic-ui.com/*
  
 ### Acknowledgments
  - QA Academy 
