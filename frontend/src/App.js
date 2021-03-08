@@ -16,8 +16,9 @@ function App() {
       {/* <NewReleasesGallery /> */}
       {/* <OpeningTime/> */}
       {/* <PlacesToGo/> */}
-      <GettingThere/>
-      <NewBooking />
+      {/* <GettingThere/>
+      <NewBooking /> */}
+      
     </div>
   );
 }
