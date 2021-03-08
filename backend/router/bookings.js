@@ -3,9 +3,7 @@ const router = require('express').Router();
 
 const { booking } = require("../config/db")
 
-
-
-//requeste e.g. CRUD
+//requests e.g. CRUD
 
 router.get("/getAll", (req, res, next) => {
     booking.find((err, booking) => {
@@ -44,35 +42,42 @@ router.delete("/delete/:id", (res, req, next) => {
 });
 
 router.patch("/update/:id", (req, res, next) => {
-    booking.findByIdAndUpdate(req, params.id,
+    booking.findByIdAndUpdate(
+        req.params.id,
         req.body,
         { new: true },
         (err, result) => {
             if (err) { next(err); }
-            res.status(202).send('Succesfully Updated')
-
-
+            res.status(202).send(result);
         })
 });
 //update whole document
 //  REPLACE
 router.put("/replace/:id", (req, res, next) => {
-    const { name ,
+    const { name,
         movie_title,
+        poster,
         screening,
+        deluxe,
         nofseats,
         adult,
         child,
-        concession
+        concessions,
+        total,
+        paymentsuccess
     } = req.body;
     booking.findByIdAndUpdate(req.params.id, {
-        name ,
+        name,
         movie_title,
+        poster,
         screening,
+        deluxe,
         nofseats,
         adult,
         child,
-        concession
+        concessions,
+        total,
+        paymentsuccess
     }, { new: true }, (err, result) => {
         if (err) {
             next(err);

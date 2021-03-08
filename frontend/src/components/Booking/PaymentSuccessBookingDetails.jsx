@@ -1,0 +1,47 @@
+import { Table } from 'reactstrap';
+
+const PaymentSuccessBookingDetails = ({ booking }) => {
+    console.log(booking.concessions);
+
+    return (
+        <>
+            <h4 className="mb-3">Booking details</h4>
+            <Table hover>
+                <tbody>
+                    <tr>
+                        <th scope="row">Movie:</th>
+                        <td>{booking.movie_title}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Screening:</th>
+                        <td>{booking.screening}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Deluxe:</th>
+                        <td>{booking.deluxe ? "Yes" : "No"}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Number of seats:</th>
+                        <td>{booking.nofseats}</td>
+                    </tr>
+                    {
+                        booking.concessions.length === 0 ?
+                            (<tr><th scope="row">Concessions:</th><td>No</td></tr>) :
+                            (
+                                <tr>
+                                    <th scope="row">Concessions:</th>
+                                    <td>Yes</td>
+                                </tr>
+                            )
+                    }
+                    <tr>
+                        <th scope="row">Total:</th>
+                        <td>{new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'GBP' }).format(booking.total)}</td>
+                    </tr>
+                </tbody>
+            </Table>
+        </>
+    )
+};
+
+export default PaymentSuccessBookingDetails;

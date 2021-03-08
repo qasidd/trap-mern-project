@@ -164,6 +164,10 @@ const NewBooking = (props) => {
         }
     };
 
+    const convertToGBP = (_total) => {
+        return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'GBP' }).format(_total);
+    }
+
     return (
         <div className="mainContent container">
             <h1 className="display-4">New Booking</h1>
@@ -278,7 +282,7 @@ const NewBooking = (props) => {
                     <div className="col-md-6 col-lg-4 order-md-2 order-1" id="filmPosterDiv">
                         <img src={selFilmObject == null ? "" : selFilmObject.poster} alt="Selected film poster" id="selFilmPoster" />
                         <div id="bookingTotalDiv">
-                            <h4 className={isNegativeTotal() && invalidForm ? "is-invalid" : ""}><small>Total:</small> {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'GBP' }).format(total)}</h4>
+                            <h4 className={isNegativeTotal() && invalidForm ? "is-invalid" : ""}><small>Total:</small> {convertToGBP(total)}</h4>
                             <div className={isNegativeTotal() && invalidForm ? "invalid-feedback text-white mb-3 mt-0" : "d-none"}>
                                 Invalid total amount
                             </div>

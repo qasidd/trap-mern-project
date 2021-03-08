@@ -5,7 +5,7 @@ const router = require('express').Router();
 const cinemaDomain = 'http://localhost:3000';
 
 router.post('/create-checkout-session', async (req, res) => {
-    const orderData = req.body;
+    const bookingData = req.body;
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items: [
@@ -13,46 +13,27 @@ router.post('/create-checkout-session', async (req, res) => {
                 price_data: {
                     currency: 'gbp',
                     product_data: {
-                        name: `${orderData.movie_title} at ${orderData.screening}`,
-                        images: [orderData.poster],
+                        name: `${bookingData.movie_title} at ${bookingData.screening}`,
+                        images: [bookingData.poster],
                         metadata: {
-                            "Screening": orderData.screening,
-                            "Deluxe": orderData.deluxe ? "Yes" : "No",
-                            "Number of seats": orderData.nofseats
-                            // "Concessions": [...JSON.stringify(orderData.concessions)]
+                            "Screening": bookingData.screening,
+                            "Deluxe": bookingData.deluxe ? "Yes" : "No",
+                            "Number of seats": bookingData.nofseats
                         }
                       },
-                      unit_amount: orderData.total * 100,
+                      unit_amount: bookingData.total * 100,
                 },
                 quantity: 1,
             },
         ],
         mode: 'payment',
-        success_url: `${cinemaDomain}?success=true`,
-        cancel_url: `${cinemaDomain}?canceled=true`,
+        success_url: `${cinemaDomain}/new-booking/success?_id=${bookingData._id}`,
+        cancel_url: `${cinemaDomain}/new-booking/cancelled?_id=${bookingData._id}`,
+        // success_url: `${cinemaDomain}?success=true`,
+        // cancel_url: `${cinemaDomain}?canceled=true`,
     });
 
-    res.json({ id: session.id });
+    res.json({ id: session.id, bookingId: bookingData._id });
 });
 
-// const calculateOrderAmount = items => {
-//     // Replace this constant with a calculation of the order's amount
-//     // Calculate the order total on the server to prevent
-//     // people from directly manipulating the amount on the client
-//     return 1400;
-// };
-
-// router.post("/create-payment-intent", async (req, res) => {
-//     const { items } = req.body;
-//     // Create a PaymentIntent with the order amount and currency
-//     const paymentIntent = await stripe.paymentIntents.create({
-//         amount: calculateOrderAmount(items),
-//         currency: "gbp"
-//     });
-//     res.send({
-//         clientSecret: paymentIntent.client_secret
-//     });
-// });
-
-// app.listen(5019, () => console.log('Running on port 5019'));
 module.exports = router;
