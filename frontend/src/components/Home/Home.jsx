@@ -11,6 +11,16 @@ return(
         <br></br>
         <p> This is the homepage for QA cinemas. This page will provide information about movies, listings and upcoming releases. </p>
         <h3> Page Under Construction </h3>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
 </>
 
 );
