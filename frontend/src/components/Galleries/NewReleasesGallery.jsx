@@ -1,5 +1,3 @@
-'use strict';
-
 import GalleryFilms from "./GalleryFilms";
 
 const NewReleasesGallery = () => {
