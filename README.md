@@ -5,6 +5,7 @@ This repository is to show the development and creation of an advance website ap
 
 ### Test Coverage: 
 ~
+## Aim Of The Project
 
 ## Getting Started
 The instructions below will help you get a version of this project up and running in a local environment or on ypur local machine for developing and testing purposes. Please see the **Prerequisites** section of this README and the deployment section for further details about setting up the live environment. 
