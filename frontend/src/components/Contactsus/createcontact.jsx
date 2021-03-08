@@ -12,7 +12,21 @@ const CreateContact = ({trigger}) =>{
  const [message, setMessage] = useState('');
 
  
-
+ const SubmitEmail= (e)=>{
+    e.preventDefault();
+    axios({
+      method: "POST", 
+      url:"/contact", 
+      data:  this.state
+    }).then((response)=>{
+      if (response.data.status === 'success'){
+          alert("Message Sent."); 
+          this.resetForm()
+      }else if(response.data.status === 'fail'){
+          alert("Message failed to send.")
+      }
+    })
+}
 
  
 
@@ -34,20 +48,22 @@ return(<>
     <Card>
 <CardBody>
 <CardTitle>Contact us Form</CardTitle>
-<form action="mailto:WTahir@qa.com&subject:{subject}" method="get" enctype="text/plain">
+<form onSubmit = {SubmitEmail} id="contact-form" method="post" role="form">
 <input 
                                 type="text" 
                                 className="form-control" 
                                 placeholder="Fullname"
                                 value={name}
                                 onChange={({target}) => setName(target.value)}
+                                required
                             />
                             <input 
-                                type="text" 
+                                type="email" 
                                 className="form-control" 
                                 placeholder="Email"
                                 value={email}
                                 onChange={({target}) => setEmail(target.value)}
+                                required
                             />
                             <input 
                                 type="text" 
@@ -55,13 +71,16 @@ return(<>
                                 placeholder="Subject"
                                 value={subject}
                                 onChange={({target}) => setSubject(target.value)}
+                                required
                             />
                             <input 
                                 type="text" 
                                 className="form-control" 
                                 placeholder="Message"
+                                rows="12" cols="35"
                                 value={message}
                                 onChange={({target}) => setMessage(target.value)}
+                                required
                             />
                             
                             <br/>
