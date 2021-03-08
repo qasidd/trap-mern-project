@@ -1,7 +1,7 @@
 # QA Cinema Web Application Project 
 
 ## Project Description
-This repository is to show the development and creation of an advance website application for a selected cinema franchise, using the full MERN stack principle. Which involves the use of: Mongo DB, Express, React and Node.JS. The frontend of the application will be built using React with CSS styling, while the backend will be built using Mongo/Mongoose, Express and Node. The functionality of our code is tested using chai, istanbul and mocha. To determine if we reach test coverage that is ideal for industry standards. Overall, this README file will give you the neccessary information to obtain a working version of this application on your local machine. 
+This repository is to show the development and creation of an advance website application for a selected cinema franchise, using the full MERN stack principle. Which involves the use of: **Mongo DB**, **Express**, **React** and **Node.JS**. The frontend of the application will be built using React with CSS styling, while the backend will be built using Mongo/Mongoose, Express and Node. The functionality of our code is tested using chai, istanbul and mocha. To determine if we reach test coverage that is ideal for industry standards. Overall, this README file will give you the neccessary information to obtain a working version of this application on your local machine. 
 
 ### Test Coverage: 
 
@@ -13,6 +13,16 @@ The information below are the required software needed to host this project on y
 Check the download section of the README, to install the neccessary software by following the weblinks.
 
 The required software:
+
+- **Version Control System: Git**
+- **GitHub Account**
+- **Postman**
+- **Visual Studio Code** 
+- **Node.JS** 
+- **Mongo DB**
+- **Express**
+
+## Downloads
 
 ## Installation
 
