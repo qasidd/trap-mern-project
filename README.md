@@ -62,7 +62,15 @@ Please feel free to contribute by adding new features to this project:
 5. Push to the branch (`git push origin <feature branch name>`)
 6. Create a new Pull Request
 
-## Deployment
+## Deployment/Running The Application
+As mention before the backend is written using Node.js and Express with some intergation from Mongo DB. Before running the whole application make sure the backend is connected to Mongo database. 
+
+To run the backend:
+```bash
+cd backend
+npm install
+npm start
+```
 
 ### Built With
  * Full MERN stack  
