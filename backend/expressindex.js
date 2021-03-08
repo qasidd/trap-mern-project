@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const createError = require('http-errors');
+
 //instantiate my app
 const app = express();
 app.use(cors());
@@ -15,7 +16,7 @@ app.use("/film",FilmRoute);
 const BookingRoute = require('./router/bookings.js')
 app.use("/bookings",BookingRoute)
 
-const ContactRoute = require('./router/contact.js')
+const ContactRoute = require('./router/contact.js');
 app.use("/contactus",ContactRoute)
 //error handling
 app.use((req,res,next) => {

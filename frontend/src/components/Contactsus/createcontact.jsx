@@ -14,19 +14,9 @@ const CreateContact = ({trigger}) =>{
  
 
 
- const create = (e) => {
-     e.preventDefault(); 
-     axios.post(`http://localhost:5019/email`, {name,email,subject,message})
-         .then((res) => {
-             // console.log(res.data);
-             clearValues();
-             trigger(res.data);
-         }).catch((err) => {
-             trigger(err.data);
-         })
- }
+ 
 
- const clearValues = () => {
+ const ClearValues = () => {
      setName('');
      setEmail('');
      setSubject('');
@@ -44,7 +34,7 @@ return(<>
     <Card>
 <CardBody>
 <CardTitle>Contact us Form</CardTitle>
-<form onSubmit={create}>
+<form action="mailto:WTahir@qa.com&subject:{subject}" method="get" enctype="text/plain">
 <input 
                                 type="text" 
                                 className="form-control" 
@@ -76,6 +66,7 @@ return(<>
                             
                             <br/>
                             <button type="submit" className="btn btn-outline-success col-md-12">Send</button>
+                            <button type="reset" className="btn btn-outline-success col-md-12" onClick= {ClearValues} >Clear</button>
                         </form>
 
 

@@ -1,25 +1,10 @@
 //import router 
 const router = require('express').Router();
 
+const { USER } = require('../config/creds');
 const { contact } = require("../config/db")
 
-
-
-
-router.get("/getAll", (req, res, next) => {
-    contact.find((err, contact) => {
-        if (err) { next(err) } else { res.send(contact) }
-    })
-});
-router.post("/create", (req, res, next) => {
-    const Email = new contact(req.body);
-    Email.save().then((contact) => {
-        res.status(201).send(`${contact.name} email has been added successfully!`)
-    })
-        .catch((err) => next(err));
-
-});
-var transport = {
+const transport = {
     host: 'smtp.example.com', // Don’t forget to replace with the SMTP host of your provider
     port: 587,
     auth: {
@@ -28,7 +13,7 @@ var transport = {
   }
 }
 
-var transporter = nodemailer.createTransport(transport)
+const transporter = nodemailer.createTransport(transport)
 
 transporter.verify((error, success) => {
   if (error) {
@@ -39,14 +24,14 @@ transporter.verify((error, success) => {
 });
 
 router.post('/send', (req, res, next) => {
-  var name = req.body.name
-  var email = req.body.email
-  var message = req.body.message
-  var content = `name: ${name} \n email: ${email} \n message: ${message} `
+  const name = req.body.name
+  const email = req.body.email
+  const message = req.body.message
+  const content = `name: ${name} \n email: ${email} \n message: ${message} `
 
-  var mail = {
+  const mail = {
     from: name,
-    to: 'RECEIVING_EMAIL_ADDRESS_GOES_HERE',  // Change to email address that you want to receive messages on
+    to: USER,  // Change to email address that you want to receive messages on
     subject: 'New Message from Contact Form',
     text: content
   }
