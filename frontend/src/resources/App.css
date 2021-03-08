@@ -1,9 +1,9 @@
 :root {
-    --main-bg-colour: #9B9898;
+    --main-bg-colour: #FAFAFA;
     --main-accent-colour: #FF6033
 }
 
-body {
+#root {
     background-color: var(--main-bg-colour);
 }
 
