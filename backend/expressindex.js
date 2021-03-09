@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const createError = require('http-errors');
+
 //instantiate my app
 const app = express();
 app.use(cors());
@@ -11,6 +12,9 @@ app.use(bodyParser.json());
 //importing all of methods
 const FilmRoute = require('./router/film.js');
 app.use("/film",FilmRoute);
+
+const ContactRoute = require('./router/contact.js');
+app.use("/contact",ContactRoute)
 
 const BookingRoute = require('./router/bookings.js');
 app.use("/bookings",BookingRoute);

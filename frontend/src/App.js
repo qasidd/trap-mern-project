@@ -3,6 +3,7 @@ import './resources/App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Classifications from './components/Classifications/Classifications';
+import ContactForm from './components/Contactsus/contactform';
 import ListingsGallery from './components/Galleries/ListingsGallery';
 import NewReleasesGallery from './components/Galleries/NewReleasesGallery';
 import GettingThere from './components/Getting-There/GettingThere';
@@ -17,6 +18,8 @@ function App() {
     <div className="App">
       {/* <Classifications /> */}
       {/* <ListingsGallery /> */}
+      <ContactForm />
+      {/* <OpeningTime/> */}
       {/* <NewReleasesGallery /> */}
       {/* <OpeningTime/> */
       {/* <NewBooking /> */}

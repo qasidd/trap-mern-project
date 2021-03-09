@@ -33,10 +33,9 @@ const bookingSchema = new Schema({
     paymentsuccess: Boolean
 });
 
-const booking = model('booking', bookingSchema)
+const booking = model('booking', bookingSchema);
 
 mongoose.connect('mongodb://localhost:27017/Booking', { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
-
     if (err) { console.error(err); } else { console.log('Connected') }
 });
 
