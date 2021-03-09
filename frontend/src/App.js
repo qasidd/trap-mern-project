@@ -12,26 +12,30 @@ import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 
 import NewBooking from './components/Booking/NewBooking';
 import PaymentSuccess from './components/Booking/PaymentSuccess';
+import PaymentCancelled from './components/Booking/PaymentCancelled';
 
 function App() {
   return (
     <div className="App">
       {/* <Classifications /> */}
       {/* <ListingsGallery /> */}
-      <ContactForm />
+      {/* <ContactForm /> */}
       {/* <OpeningTime/> */}
       {/* <NewReleasesGallery /> */}
-      {/* <OpeningTime/> */
+      {/* <OpeningTime/> */}
       {/* <NewBooking /> */}
       {/* <PaymentForm /> */}
       {/* <CardForm /> */}
       <Router>
         <Switch>
           <Route path="/" exact>
+            <ListingsGallery />
+          </Route>
+          <Route path="/new-booking" exact>
             <NewBooking />
           </Route>
           <Route path="/new-booking/success" component={PaymentSuccess} />
-          <Route path="/new-booking/cancelled" component={PaymentSuccess} />
+          <Route path="/new-booking/cancelled" component={PaymentCancelled} />
         </Switch>
       </Router>
       {/* <GettingThere/> */}
