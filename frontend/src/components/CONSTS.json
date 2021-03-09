@@ -1,5 +1,7 @@
 {
-    "Forum_URL":"http://localhost:5019/forum",
     "FILM_URL": "http://localhost:5019/film",
-    "CONTACT_URL": "http://localhost:5019/contact"
+    "BOOKING_URL": "http://localhost:5019/bookings",
+    "Forum_URL":"http://localhost:5019/forum",
+    "CONTACT_URL": "http://localhost:5019/contact",
+    "STRIPE_URL": "http://localhost:5019/stripe"
 }

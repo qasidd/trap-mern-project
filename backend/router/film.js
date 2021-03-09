@@ -37,9 +37,10 @@ router.get("/getAll/upcoming", (req, res, next) => {
 
 router.post("/create", (req, res, next) => {
     const Movie = new film(req.body);
-    Movie.save().then((film) => {
-        res.status(201).send(`${film.title} has been added successfully!`)
-    })
+    Movie.save()
+        .then((film) => {
+            res.status(201).send(`${film.title} has been added successfully!`)
+        })
         .catch((err) => next(err));
 
 });

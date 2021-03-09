@@ -1,14 +1,16 @@
 :root {
-    --main-bg-colour: #9B9898;
-    --main-accent-colour: #FF6033
+    --main-bg-colour: #fafafa;
+    --main-accent-colour: #FF6033;
+    --main-accent-colour-dark: #c44824;
 }
 
-body {
+#root {
     background-color: var(--main-bg-colour);
 }
 
 .mainContent {
-    padding-top: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 .mainContent h1 {
@@ -63,13 +65,13 @@ a {
 
 .filmModal .modal-header {
     color: white;
-    background-color: #c44824;
+    background-color: var(--main-accent-colour-dark);
     border-bottom: 0;
 }
 
 .filmModal .modal-footer {
     color: white;
-    background-color: #c44824;
+    background-color: var(--main-accent-colour-dark);
     border-top: 0;
 }
 
@@ -109,4 +111,66 @@ a {
     .filmModal .modal-body img {
         margin-left: 64%;
     }
+}
+
+/* Booking */
+
+#selFilmPoster {
+    max-width: 100%;
+    max-height: 435px;
+    border-radius: 20px;
+}
+
+.bookingForm .form-control {
+    border: 1px solid var(--main-accent-colour);
+    background-color: var(--main-bg-colour);
+    color: rgb(26, 26, 26);
+}
+
+.bookingForm .form-control:focus {
+    border-color: var(--main-accent-colour);
+    box-shadow: 0 0 0 .2rem rgba(255,96,51,.25);
+}
+
+#filmPosterDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    
+    #filmPosterDiv {
+        margin-bottom: 1rem;
+    }
+}
+
+.btn-outline-accent {
+    color: var(--main-accent-colour) !important;
+    border-color: var(--main-accent-colour) !important;
+}
+
+.btn-outline-accent:hover {
+    background-color: var(--main-accent-colour);
+    color: #fff !important;
+    border-color: var(--main-accent-colour);
+}
+
+.btn-outline-accent:focus {
+    box-shadow: 0 0 0 .2rem rgba(255,96,51,.25) !important; 
+}
+
+#bookingTotalDiv {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    max-width: 290px;
+    background-color: var(--main-accent-colour);
+    border-radius: 20px;
+    color: white;
+}
+
+#bookingTotalDiv [type="submit"]:hover {
+    color: var(--main-accent-colour)
 }
