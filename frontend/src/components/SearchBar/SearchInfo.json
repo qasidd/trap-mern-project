@@ -94,6 +94,24 @@
         "title": "Email Form",
         "Descrption":"A page that has the company email, to ask us anything about our products and cinema related",
         "URL":"http://localhost:5019/EmailForm"
+      },
+      
+      {
+        "SearchId": 1,
+        "id": 13,
+        "title": "About Page",
+        "Descrption":"A page for purpose of the webiste and the staff or members that built the website for enquires",
+        "URL":"http://localhost:5019/AboutPage"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 14,
+        "title": "Contact Page",
+        "Descrption":"A page to contact the owner of the website",
+        "URL":"http://localhost:5019/ContactPage"
       }
+
+
       
 ]
