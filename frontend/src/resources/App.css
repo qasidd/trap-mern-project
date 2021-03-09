@@ -113,6 +113,20 @@ a {
     }
 }
 
+
+.filmModal a[href*="new-booking"] {
+    color: #fff !important;
+}
+
+.filmModal a[href*="new-booking"]:hover {
+    color: var(--main-accent-colour-dark) !important;
+}
+
+#screeningsOverflowDiv {
+    overflow: auto;
+    max-height: 160px;
+}
+
 /* Booking */
 
 #selFilmPoster {
