@@ -10,7 +10,6 @@ import Home from './components/Home/Home';
 import OpeningTime from './components/Opening-Times/CinemaTime';
 import './resources/App.css';
 import Nav from "./components/Routing/Nav";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import About from './components/About/About';
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react";
