@@ -27,7 +27,7 @@ const PaymentSuccess = (props) => {
 
     return (
         <div className="mainContent container">
-            <h1 className="dispaly-4">Booking successful!</h1>
+            <h1 className="dispaly-4"><span>&#10003;</span> Booking successful!</h1>
             <p>You are now booked to see {booking.movie_title} on {booking.screening}.</p>
             <PaymentSuccessBookingDetails booking={booking} />
         </div>

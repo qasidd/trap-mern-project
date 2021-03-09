@@ -91,7 +91,7 @@ const NewBooking = (props) => {
             "adult": adults,
             "child": children,
             "concessions": concessions,
-            "total": total,
+            "total": total.toFixed(2),
             "paymentsuccess": false
         }
 

@@ -54,7 +54,8 @@ router.patch("/update/:id", (req, res, next) => {
 //update whole document
 //  REPLACE
 router.put("/replace/:id", (req, res, next) => {
-    const { name,
+    const { 
+        name,
         movie_title,
         poster,
         screening,

@@ -9,6 +9,14 @@ const PaymentSuccessBookingDetails = ({ booking }) => {
             <Table hover>
                 <tbody>
                     <tr>
+                        <th scope="row">Booking ID:</th>
+                        <td>{booking._id}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Name on booking:</th>
+                        <td>{booking.name}</td>
+                    </tr>
+                    <tr>
                         <th scope="row">Movie:</th>
                         <td>{booking.movie_title}</td>
                     </tr>
@@ -25,14 +33,12 @@ const PaymentSuccessBookingDetails = ({ booking }) => {
                         <td>{booking.nofseats}</td>
                     </tr>
                     {
-                        booking.concessions.length === 0 ?
-                            (<tr><th scope="row">Concessions:</th><td>No</td></tr>) :
-                            (
-                                <tr>
-                                    <th scope="row">Concessions:</th>
-                                    <td>Yes</td>
-                                </tr>
-                            )
+                        booking.concessions.map((con, i) => (
+                            <tr>
+                                <th scope="row">Concession {i+1}:</th>
+                                <td>{con.type}, {con.size}, {con.quantity}</td>
+                            </tr>
+                        ))
                     }
                     <tr>
                         <th scope="row">Total:</th>

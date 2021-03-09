@@ -28,9 +28,7 @@ router.post('/create-checkout-session', async (req, res) => {
         ],
         mode: 'payment',
         success_url: `${cinemaDomain}/new-booking/success?_id=${bookingData._id}`,
-        cancel_url: `${cinemaDomain}/new-booking/cancelled?_id=${bookingData._id}`,
-        // success_url: `${cinemaDomain}?success=true`,
-        // cancel_url: `${cinemaDomain}?canceled=true`,
+        cancel_url: `${cinemaDomain}/new-booking/cancelled?_id=${bookingData._id}`
     });
 
     res.json({ id: session.id, bookingId: bookingData._id });
