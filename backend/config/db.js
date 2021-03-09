@@ -35,9 +35,19 @@ const bookingSchema = new Schema({
 
 const booking = model('booking', bookingSchema);
 
+const ForumSchema = new Schema({
+
+    username:String,
+    movietitle : String,
+    comment : String,
+    rating:Number,
+    created : Date
+    
+    });
+    const forum = model('forum',ForumSchema)
 mongoose.connect('mongodb://localhost:27017/Booking', { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) { console.error(err); } else { console.log('Connected') }
 });
 
-module.exports = { 'film': film, 'booking': booking };
+module.exports = { 'film': film, 'booking': booking,'forum':forum };
 
