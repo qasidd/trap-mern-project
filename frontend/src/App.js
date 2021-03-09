@@ -30,6 +30,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <ListingsGallery />
+            {/* <NewReleasesGallery /> */}
           </Route>
           <Route path="/new-booking" exact>
             <NewBooking />

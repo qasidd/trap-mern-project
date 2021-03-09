@@ -67,10 +67,7 @@ const FilmModal = ({ modal, toggle, film, galleryType }) => {
                 </div>
             </ModalBody>
             <ModalFooter className={galleryType === "upcoming" ? "d-none" : ""}>
-                <a 
-                    className="btn btn-outline-light" 
-                    href={`${BASE_URL}/new-booking`}
-                >
+                <a className="btn btn-outline-light" href={`${BASE_URL}/new-booking`}>
                         See Tickets
                 </a>
             </ModalFooter>

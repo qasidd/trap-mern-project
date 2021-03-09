@@ -26,7 +26,12 @@ const GalleryFilms = ({ galleryType }) => {
     if (error) {
         return <Alert color="danger">Error - {error}</Alert>
     } else if (!isLoaded) {
-        return <Spinner className="text-center" animation="border" role="status" />
+        return (
+            <div className="col-12 text-center">
+                <p>Loading...</p>
+                <Spinner animation="border" role="status" />
+            </div>
+        )
     } else {
         return (
             <>
