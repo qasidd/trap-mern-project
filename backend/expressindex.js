@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const createError = require('http-errors');
-const nodemailer = require('nodemailer')
 
 //instantiate my app
 const app = express();
@@ -19,6 +18,7 @@ app.use("/bookings",BookingRoute)
 
 const ContactRoute = require('./router/contact.js');
 app.use("/contact",ContactRoute)
+
 //error handling
 app.use((req,res,next) => {
     next(createError(404, 'Resource not found'));
