@@ -8,6 +8,10 @@ import {Link} from 'react-router-dom';
 import Nav from "./components/Routing/Nav";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import About from './components/About/About';
+import React from "react";
+import { ImageBackground, StyleSheet, Text, View } from "react";
+
+const image = { uri: "https://reactjs.org/logo-og.png" };
 
 
 function App() {
@@ -32,5 +36,7 @@ function App() {
     </div>
   );
 }
+
+
 // Random text so I can commit 
 export default App;
