@@ -3,7 +3,8 @@ const profanity = require('profanity-middleware');
 const { forum } = require("../config/db")
 
 profanity.setOptions({
-	mask: '$', 
+	mask: '', 
+    fullyMasked: true,
 	blacklist: ['foul', 'slang']
 });
 
