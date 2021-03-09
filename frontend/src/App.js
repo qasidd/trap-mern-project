@@ -5,7 +5,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Classifications from './components/Classifications/Classifications';
 import ListingsGallery from './components/Galleries/ListingsGallery';
 import NewReleasesGallery from './components/Galleries/NewReleasesGallery';
+import GettingThere from './components/Getting-There/GettingThere';
 import OpeningTime from './components/Opening-Times/CinemaTime';
+import PlacesToGo from './components/PlacesToGo/PlacesToGo';
+
 import NewBooking from './components/Booking/NewBooking';
 import PaymentSuccess from './components/Booking/PaymentSuccess';
 
@@ -15,7 +18,7 @@ function App() {
       {/* <Classifications /> */}
       {/* <ListingsGallery /> */}
       {/* <NewReleasesGallery /> */}
-      {/* <OpeningTime/> */}
+      {/* <OpeningTime/> */
       {/* <NewBooking /> */}
       {/* <PaymentForm /> */}
       {/* <CardForm /> */}
@@ -28,6 +31,8 @@ function App() {
           <Route path="/new-booking/cancelled" component={PaymentSuccess} />
         </Switch>
       </Router>
+      {/* <GettingThere/> */}
+      {/* <NewBooking /> */}
     </div>
   );
 }
