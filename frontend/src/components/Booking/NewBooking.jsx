@@ -1,7 +1,13 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { FILM_URL, BOOKING_URL } from '../CONSTS.json';
+import { FILM_URL, BOOKING_URL, STRIPE_URL } from '../CONSTS.json';
 import ConcessionInput from './ConcessionInput';
+import { loadStripe } from "@stripe/stripe-js";
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+// const stripePromise = loadStripe("pk_test_51IQCoXLkbOx0gq9RTzFXzEKFOhDnWUqOA8mtbrQPoOixCTUSUzsqldQLcdpsOzTM0DSGwxSoey80OTGF8AjSFnHI00Ay4P4Qlb");
 
 const NewBooking = (props) => {
 
@@ -18,6 +24,24 @@ const NewBooking = (props) => {
     const [total, setTotal] = useState(0.0);
     const [invalidForm, setInvalidForm] = useState(false);
 
+    useEffect(() => {
+        axios.get(`${FILM_URL}/getAll/nowShowing`)
+            .then((res) => {
+                setFilmList(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
+
+    const selectedFilm = ({ target }) => {
+        const filmObject = filmList.filter((film) => {
+            return film.title === target.value;
+        })
+        setSelFilmObject(filmObject[0]);
+        setSelFilmScreenings(filmObject[0].screenings);
+    };
+
     const updateConcession = (index, key, value) => {
 
         setConcessions((prevConcessions) => {
@@ -25,7 +49,7 @@ const NewBooking = (props) => {
             _concessions[index][key] = value;
             return _concessions;
         })
-    }
+    };
 
     const addConcessionInput = () => {
         setConcessionInputs(
@@ -38,25 +62,7 @@ const NewBooking = (props) => {
         );
         const newCon = { "type": "Popcorn", "size": "S", "quantity": 0 };
         setConcessions((conArray) => [...conArray, newCon]);
-    }
-
-    const selectedFilm = ({ target }) => {
-        const filmObject = filmList.filter((film) => {
-            return film.title === target.value;
-        })
-        setSelFilmObject(filmObject[0]);
-        setSelFilmScreenings(filmObject[0].screenings);
-    }
-
-    useEffect(() => {
-        axios.get(`${FILM_URL}/getAll/nowShowing`)
-            .then((res) => {
-                setFilmList(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }, []);
+    };
 
     useEffect(() => {
         let val = 0;
@@ -72,55 +78,94 @@ const NewBooking = (props) => {
             }
         });
         setTotal(val);
-    }, [deluxe, adults, children, concessions])
+    }, [deluxe, adults, children, concessions]);
 
     const createBooking = () => {
         const newBookingBody = {
             "name": name,
             "movie_title": selFilmObject.title,
+            "poster": selFilmObject.poster,
             "screening": screening,
             "deluxe": deluxe,
             "nofseats": parseInt(adults) + parseInt(children),
             "adult": adults,
             "child": children,
             "concessions": concessions,
-            "total": total,
+            "total": total.toFixed(2),
             "paymentsuccess": false
         }
 
         axios.post(`${BOOKING_URL}/create`, newBookingBody)
             .then((res) => {
-                console.log(res);
+                toCheckout(res.data);
             })
             .catch((err) => {
                 console.log(err);
             });
-    }
+    };
+
+    const toCheckout = async (newBookingData) => {
+        // Get Stripe.js instance
+        const stripe = await stripePromise;
+
+        // Call your backend to create the Checkout Session
+        const response = await fetch(
+            `${STRIPE_URL}/create-checkout-session`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newBookingData)
+            }
+        );
+
+        const session = await response.json();
+
+        // When the customer clicks on the button, redirect them to Checkout.
+        const result = await stripe.redirectToCheckout({
+            sessionId: session.id,
+        });
+
+        if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer
+            // using `result.error.message`.
+        }
+    };
 
     const isBlankFilm = () => {
         return selFilmObject === null;
-    }
+    };
 
     const isBlankScreening = () => {
         return screening === "";
-    }
+    };
 
     const isBlankName = () => {
         return name === "";
-    }
+    };
 
     const isBlankSeats = () => {
         return (adults + children) === 0
+    };
+
+    const isNegativeTotal = () => {
+        return total < 0;
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!isBlankFilm() && !isBlankScreening() && !isBlankName() && !isBlankSeats()) {
+        if (!isBlankFilm() && !isBlankScreening() && !isBlankName() && !isBlankSeats() && !isNegativeTotal()) {
             setInvalidForm(false);
             createBooking();
         } else {
             setInvalidForm(true);
         }
+    };
+
+    const convertToGBP = (_total) => {
+        return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'GBP' }).format(_total);
     }
 
     return (
@@ -237,13 +282,16 @@ const NewBooking = (props) => {
                     <div className="col-md-6 col-lg-4 order-md-2 order-1" id="filmPosterDiv">
                         <img src={selFilmObject == null ? "" : selFilmObject.poster} alt="Selected film poster" id="selFilmPoster" />
                         <div id="bookingTotalDiv">
-                            <h4><small>Total:</small> {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'GBP' }).format(total)}</h4>
+                            <h4 className={isNegativeTotal() && invalidForm ? "is-invalid" : ""}><small>Total:</small> {convertToGBP(total)}</h4>
+                            <div className={isNegativeTotal() && invalidForm ? "invalid-feedback text-white mb-3 mt-0" : "d-none"}>
+                                Invalid total amount
+                            </div>
                             <button
                                 type="submit"
                                 className="btn btn-outline-light"
                             >
                                 Proceed to payment
-                        </button>
+                            </button>
                         </div>
                     </div>
                 </div>

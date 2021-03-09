@@ -1,3 +1,7 @@
+import './resources/App.css';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Classifications from './components/Classifications/Classifications';
 import ListingsGallery from './components/Galleries/ListingsGallery';
 import NewReleasesGallery from './components/Galleries/NewReleasesGallery';
@@ -6,7 +10,7 @@ import OpeningTime from './components/Opening-Times/CinemaTime';
 import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 
 import NewBooking from './components/Booking/NewBooking';
-import './resources/App.css';
+import PaymentSuccess from './components/Booking/PaymentSuccess';
 
 function App() {
   return (
@@ -14,10 +18,21 @@ function App() {
       {/* <Classifications /> */}
       {/* <ListingsGallery /> */}
       {/* <NewReleasesGallery /> */}
-      {/* <OpeningTime/> */}
-      {/* <PlacesToGo/> */}
-      <GettingThere/>
-      <NewBooking />
+      {/* <OpeningTime/> */
+      {/* <NewBooking /> */}
+      {/* <PaymentForm /> */}
+      {/* <CardForm /> */}
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <NewBooking />
+          </Route>
+          <Route path="/new-booking/success" component={PaymentSuccess} />
+          <Route path="/new-booking/cancelled" component={PaymentSuccess} />
+        </Switch>
+      </Router>
+      {/* <GettingThere/> */}
+      {/* <NewBooking /> */}
     </div>
   );
 }
