@@ -46,7 +46,54 @@
         "title": "Screens",
         "Descrption":"A section of the website that the different screens avaliable at the cinema.",
         "URL":"http://localhost:5019/Screens"
-      }
+      },
 
+      {
+        "SearchId": 1,
+        "id": 7,
+        "title": "Ticket Bookings",
+        "Descrption":"A page dedicated for booking tickets and food products",
+        "URL":"http://localhost:5019/Bookings"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 8,
+        "title": "Payment",
+        "Descrption":"A page dedicated for paying pre-book tickets",
+        "URL":"http://localhost:5019/Payments"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 9,
+        "title": "Places to Go",
+        "Descrption":"A page to see different bars, resturants, activity venue near by the cinema",
+        "URL":"http://localhost:5019/PlacesToGo"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 10,
+        "title": "Getting There",
+        "Descrption":"A page for detail directions to the cinema, with google maps and public transport directions",
+        "URL":"http://localhost:5019/GettingThere"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 11,
+        "title": "Discussion Board",
+        "Descrption":"A page that has a discussion board forum for questions, answers and a friendly chat  ",
+        "URL":"http://localhost:5019/DiscussionBoard"
+      },
+      
+      {
+        "SearchId": 1,
+        "id": 12,
+        "title": "Email Form",
+        "Descrption":"A page that has the company email, to ask us anything about our products and cinema related",
+        "URL":"http://localhost:5019/EmailForm"
+      }
       
 ]
