@@ -5,7 +5,14 @@ This repository is to show the development and creation of an advance website ap
 
 ### Test Coverage: 
 ~
+
+
 ## Aim Of The Project
+ * As a team creating a full stack website application using MERN and other methods that were taught to us during our time at QA Academy. 
+ * Using a specification given to use by a client highlight the **Minimum Value Product(MVP)** which will help in the design of the website. 
+ * Use wireframe.cc to plan the website pages. 
+ * Work in agile mindset when developing the website.  
+
 
 ## Getting Started
 The instructions below will help you get a version of this project up and running in a local environment or on ypur local machine for developing and testing purposes. Please see the **Prerequisites** section of this README and the deployment section for further details about setting up the live environment. 
@@ -93,7 +100,7 @@ npm start
 
 
 ### Built With
- - Full MERN stack  
+ - Full MERN stack (`**MongoDB, Express, React and Node.JS**`)
 
 ### Authors 
  - Siddhartha Gurung (Owner of repository)
