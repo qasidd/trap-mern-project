@@ -1,5 +1,6 @@
 import './resources/App.css';
 
+import Discussionboard from './components/pages/Discussionboard';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Classifications from './components/Classifications/Classifications';
@@ -13,6 +14,7 @@ import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 import NewBooking from './components/Booking/NewBooking';
 import PaymentSuccess from './components/Booking/PaymentSuccess';
 import PaymentCancelled from './components/Booking/PaymentCancelled';
+
 
 function App() {
   return (
