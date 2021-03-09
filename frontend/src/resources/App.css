@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+:root {
+    --main-bg-colour: #fafafa;
+    --main-accent-colour: #FF6033;
+    --main-accent-colour-dark: #c44824;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+    background-color: var(--main-bg-colour);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainContent {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.mainContent h1 {
+    color: var(--main-accent-colour);
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    color: var(--main-accent-colour) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainContent .nav-item a {
+    color: var(--main-accent-colour);
+}
+
+.galleryPoster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0px 2rem;
+    text-align: center;
+    border-radius: 20px;
+    transition: transform .2s;
+    color: white;
+}
+
+.galleryPoster span {
+    visibility: hidden;
+    font-size: 22px;
+    font-weight: 100;
+    text-shadow: 0px 1px rgba(0,0,0);
+}
+
+.galleryPoster:hover {
+    transform: scale(1.02);
+    border: 5px solid var(--main-accent-colour);
+    box-shadow: inset 0px 0px 300px 10px rgba(0,0,0,0.8);
+}
+
+.galleryPoster:hover span {
+    visibility: visible;
+}
+
+.filmModal {
+    max-width: 680px !important;
+}
+
+.filmModal .modal-body {
+    background-color: var(--main-accent-colour);
+    color: white;
+}
+
+.filmModal .modal-header {
+    color: white;
+    background-color: var(--main-accent-colour-dark);
+    border-bottom: 0;
+}
+
+.filmModal .modal-footer {
+    color: white;
+    background-color: var(--main-accent-colour-dark);
+    border-top: 0;
+}
+
+.filmModal .modal-body img {
+    position: absolute;
+    z-index: 1;
+    margin-left: 76%;
+    margin-top: -150px;
+    border-radius: 15px;
+    max-height: 200px;
+}
+
+@media (max-width: 710px) { 
+
+    .filmModal .modal-body img {
+        margin-left: 76%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .filmModal .modal-body img {
+        margin-left: 73%;
+    }
+}
+
+@media (max-width: 590px) {
+
+    .filmModal .modal-body img {
+        margin-left: 70%;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .filmModal .modal-body img {
+        margin-left: 64%;
+    }
+}
+
+
+.filmModal a[href*="new-booking"] {
+    color: #fff !important;
+}
+
+.filmModal a[href*="new-booking"]:hover {
+    color: var(--main-accent-colour-dark) !important;
+}
+
+#screeningsOverflowDiv {
+    overflow: auto;
+    max-height: 160px;
+}
+
+/* Booking */
+
+#selFilmPoster {
+    max-width: 100%;
+    max-height: 435px;
+    border-radius: 20px;
+}
+
+.bookingForm .form-control {
+    border: 1px solid var(--main-accent-colour);
+    background-color: var(--main-bg-colour);
+    color: rgb(26, 26, 26);
+}
+
+.bookingForm .form-control:focus {
+    border-color: var(--main-accent-colour);
+    box-shadow: 0 0 0 .2rem rgba(255,96,51,.25);
+}
+
+#filmPosterDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    
+    #filmPosterDiv {
+        margin-bottom: 1rem;
+    }
+}
+
+.btn-outline-accent {
+    color: var(--main-accent-colour) !important;
+    border-color: var(--main-accent-colour) !important;
+}
+
+.btn-outline-accent:hover {
+    background-color: var(--main-accent-colour);
+    color: #fff !important;
+    border-color: var(--main-accent-colour);
+}
+
+.btn-outline-accent:focus {
+    box-shadow: 0 0 0 .2rem rgba(255,96,51,.25) !important; 
+}
+
+#bookingTotalDiv {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    max-width: 290px;
+    background-color: var(--main-accent-colour);
+    border-radius: 20px;
+    color: white;
+}
+
+#bookingTotalDiv [type="submit"]:hover {
+    color: var(--main-accent-colour)
 }
