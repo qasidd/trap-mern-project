@@ -1,8 +1,11 @@
 const router = require('express').Router();
-
+const profanity = require('profanity-middleware');
 const { forum } = require("../config/db")
 
-
+profanity.setOptions({
+	mask: '$', 
+	blacklist: ['foul', 'slang']
+});
 
 //requeste e.g. CRUD
 
@@ -21,7 +24,7 @@ router.get("/get/:id", (req, res, next) => {
 })
 
 
-router.post("/create", (req, res, next) => {
+router.post("/create",profanity.init, (req, res, next) => {
     const Message = new forum(req.body);
     Message.save().then((forum) => {
             res.status(201).send(`${forum.username} post has been added successfully!`)

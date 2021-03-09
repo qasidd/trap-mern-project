@@ -1,6 +1,6 @@
 import './resources/App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Discussionboard from './Components/pages/Discussionboard';
+import Discussionboard from './comps/pages/Discussionboard';
 function App() {
   return (
     <Router>

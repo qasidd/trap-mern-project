@@ -19,6 +19,7 @@
     "http-errors": "^1.8.0",
     "mongoose": "^5.11.17",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "profanity-middleware": "^0.3.0"
   }
 }
