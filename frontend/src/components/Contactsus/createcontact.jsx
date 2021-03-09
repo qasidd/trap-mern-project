@@ -1,6 +1,7 @@
 import { Card, CardBody, CardTitle } from "reactstrap"
 import axios from "axios";
 import { useState } from "react";
+import Contact_URL from '../CONSTS.json'
 
 
 
@@ -14,18 +15,17 @@ const CreateContact = ({trigger}) =>{
  
  const SubmitEmail= (e)=>{
     e.preventDefault();
-    axios({
-      method: "POST", 
-      url:"/contact", 
-      data:  this.state
-    }).then((response)=>{
+    axios.post(`${Contact_URL}/sendemail`,{name,email,subject,message})
+    .then((response)=>{
       if (response.data.status === 'success'){
           alert("Message Sent."); 
           this.resetForm()
       }else if(response.data.status === 'fail'){
           alert("Message failed to send.")
       }
+      
     })
+    .catch((err) => {console.log(err)})
 }
 
  

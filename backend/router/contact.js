@@ -5,11 +5,11 @@ const Email_PASS = require('../config/creds')
 const nodemailer = require('nodemailer')
 
 // POST route from contact form
-router.post('/contact', (req, res) => {
+router.post('/sendemail', (req, res) => {
 
     // Instantiate the SMTP server
     const smtpTrans = nodemailer.createTransport({
-      host: 'smtp.live.com',
+      host: 'smtp.gmail.com',
       port: 465,
       secure: true,
       auth: {
