@@ -158,5 +158,3 @@ const Bars = () => {
 }
 
 export default Bars;
-//Hey
-//Bye
