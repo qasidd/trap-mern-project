@@ -25,6 +25,7 @@ function App() {
             <NewBooking />
           </Route>
           <Route path="/new-booking/success" component={PaymentSuccess} />
+          <Route path="/new-booking/cancelled" component={PaymentSuccess} />
         </Switch>
       </Router>
     </div>
