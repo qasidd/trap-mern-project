@@ -22,6 +22,9 @@ app.use("/bookings",BookingRoute);
 const StripeRoute = require('./router/payments.js');
 app.use("/stripe", StripeRoute);
 
+const ForumRoute = require('./router/forum.js');
+app.use("/forum", ForumRoute);
+
 //error handling
 app.use((req,res,next) => {
     next(createError(404, 'Resource not found'));
