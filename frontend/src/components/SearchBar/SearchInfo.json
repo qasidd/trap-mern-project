@@ -3,8 +3,50 @@
     {
       "SearchId": 1,
       "id": 1,
-      "title": "hi",
-      "URL":"http://localhost:5019/home",
-      "Descrption":""
-    }
+      "title": "Cinema Homepage",
+      "Descrption":"The general homepage of the cinema",
+      "URL":"http://localhost:5019/home"
+    },
+
+    {
+      "SearchId": 1,
+      "id": 2,
+      "title": "Cinema Listings Gallery",
+      "Descrption":"A gallery showing all the films that a present at the cinema",
+      "URL":"http://localhost:5019/ListingGallery"
+    },
+
+    {
+        "SearchId": 1,
+        "id": 3,
+        "title": "Cinema Opening Times",
+        "Descrption":"Details about the opening times of the cinema",
+        "URL":"http://localhost:5019/OpeningTimes"
+      },
+
+    {
+        "SearchId": 1,
+        "id": 4,
+        "title": "New Releases Gallery",
+        "Descrption":"A gallery showing all the films that show possible new releases at the cinema",
+        "URL":"http://localhost:5019/NewListingGallery"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 5,
+        "title": "Classifications",
+        "Descrption":"A section of the website that shows film classification, such as age rating. ",
+        "URL":"http://localhost:5019/Classifications"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 6,
+        "title": "Screens",
+        "Descrption":"A section of the website that the different screens avaliable at the cinema.",
+        "URL":"http://localhost:5019/Screens"
+      }
+
+      
 ]
