@@ -52,13 +52,13 @@ const FilmModal = ({ modal, toggle, film, galleryType }) => {
                     </div>
                     <div className="col-12">
                         <p className="mb-0"><b>Showing times:</b></p>
-                        <div className="row">
+                        <div className="row" id="screeningsOverflowDiv">
                             {
                                 screenings.length === 0 ?
                                     <div className="col-12"><p className="mb-2">Coming soon!</p></div> :
-                                    screenings.map((scr) => (
+                                    screenings.map(scr => (
                                         <div className="col-sm-6 col-12">
-                                            <p className="mb-1">{new Date(scr).toUTCString()}</p>
+                                            <p className="mb-2">{new Date(scr).toUTCString()}</p>
                                         </div>
                                     ))
                             }
