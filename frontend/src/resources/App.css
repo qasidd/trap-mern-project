@@ -84,6 +84,14 @@ a {
     max-height: 200px;
 }
 
+.filmModal a[href*="new-booking"] {
+    color: #fff !important;
+}
+
+.filmModal a[href*="new-booking"]:hover {
+    color: var(--main-accent-colour-dark) !important;
+}
+
 @media (max-width: 710px) { 
 
     .filmModal .modal-body img {
