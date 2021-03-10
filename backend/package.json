@@ -1,10 +1,11 @@
 {
-  "name": "expressdemo",
+  "name": "QA Cinemas backend",
   "version": "1.0.0",
-  "description": "express demo",
+  "description": "Team Trap",
   "main": "expressindex.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha __tests__/",
+    "coverage": "nyc npm test",
     "start": "nodemon expressindex.js"
   },
   "repository": {
@@ -23,5 +24,11 @@
     "profanity-middleware": "^0.3.0",
     "nodemailer": "^6.5.0",
     "stripe": "^8.137.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.3",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.3.1",
+    "nyc": "^15.1.0"
   }
 }

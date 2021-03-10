@@ -10,6 +10,7 @@ router.get("/getAll", (req, res, next) => {
         if (err) { next(err) } else { res.send(booking) }
     })
 });
+
 router.get("/get/:id", (req, res, next) => {
     booking.findById(req.params.id, (err, result) => {
         if (err) {
@@ -19,25 +20,20 @@ router.get("/get/:id", (req, res, next) => {
     })
 })
 
-
 router.post("/create", (req, res, next) => {
     const Order = new booking(req.body);
     Order.save()
         .then((booking) => {
-            // res.status(201).send(`${booking.name} has been added successfully!`);
             res.status(201).send(booking);
         })
         .catch((err) => next(err));
-
 });
 
-router.delete("/delete/:id", (res, req, next) => {
+router.delete("/delete/:id", (req, res, next) => {
     booking.findByIdAndDelete(req.params.id, (err) => {
         if (err) {
             next(err);
-        } res.statusCode(204).send('succesfully deleted')
-
-
+        } res.status(204).send('succesfully deleted')
     })
 });
 
@@ -51,8 +47,7 @@ router.patch("/update/:id", (req, res, next) => {
             res.status(202).send(result);
         })
 });
-//update whole document
-//  REPLACE
+
 router.put("/replace/:id", (req, res, next) => {
     const { 
         name,
