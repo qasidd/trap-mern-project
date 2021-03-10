@@ -40,3 +40,4 @@ app.use((err,req,res,next)=>{
 //const server = app.listen
 
 const server = app.listen(5019, () =>{ console.log(`server was succesfully started on port number: ${server.address().port}`)} );
+module.exports = server 
