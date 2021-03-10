@@ -1,7 +1,7 @@
 {
-  "name": "QA Cinemas backend",
+  "name": "expressdemo",
   "version": "1.0.0",
-  "description": "Team Trap",
+  "description": "express demo",
   "main": "expressindex.js",
   "scripts": {
     "test": "mocha __tests__/",

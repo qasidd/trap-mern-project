@@ -1,3 +1,5 @@
 {
-    "BOOKINGS_URL": "/bookings"
+    "BOOKINGS_URL": "/bookings",
+    "TEST_URL": "mongodb://localhost:27017/Booking",
+    "LIVE_URL": "mongodb+srv://qatrap:qatrap@cluster0.fcgeo.mongodb.net/test"
 }
