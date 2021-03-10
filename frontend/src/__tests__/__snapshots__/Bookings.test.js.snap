@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should match the snapshot every time it's rendered 1`] = `
+<div
+  className="mainContent container"
+>
+  <h1
+    className="display-4"
+  >
+    New Booking
+  </h1>
+  <form
+    className="bookingForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-6 col-lg-8 order-md-1 order-2"
+      >
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="filmSelect"
+          >
+            Film
+          </label>
+          <select
+            className="form-control form-control-lg"
+            onChange={[Function]}
+          />
+          <div
+            className="d-none"
+          >
+            Please select a film.
+          </div>
+        </div>
+        <div
+          className="form-row"
+        >
+          <div
+            className="form-group col-8"
+          >
+            <label
+              htmlFor="filmSelect"
+            >
+              Screenings
+            </label>
+            <select
+              className="form-control"
+              onChange={[Function]}
+            >
+              <option>
+                 - 
+              </option>
+            </select>
+            <div
+              className="d-none"
+            >
+              Please select a screening.
+            </div>
+          </div>
+          <div
+            className="form-group col-4"
+          >
+            <label
+              htmlFor="filmSelect"
+            >
+              Deluxe?
+            </label>
+            <select
+              className="form-control"
+              onChange={[Function]}
+            >
+              <option
+                value="No"
+              >
+                No
+              </option>
+              <option
+                value="Yes"
+              >
+                Yes
+              </option>
+            </select>
+          </div>
+        </div>
+        <div
+          className="form-group"
+        >
+          <label
+            htmlFor="nameInput"
+          >
+            Name on booking
+          </label>
+          <input
+            className="form-control"
+            id="nameInput"
+            name="nameInput"
+            onChange={[Function]}
+            type="text"
+          />
+          <div
+            className="d-none"
+          >
+            Please provide a name for the booking.
+          </div>
+        </div>
+        <div
+          className="form-row"
+        >
+          <div
+            className="form-group col-6"
+          >
+            <label
+              htmlFor="numOfAdultsInput"
+            >
+              Adult(s) 
+              <small>
+                <em>
+                  £8, £12 deluxe
+                </em>
+              </small>
+            </label>
+            <input
+              className="form-control"
+              id="numOfAdultsInput"
+              name="numOfAdultsInput"
+              onChange={[Function]}
+              type="number"
+            />
+          </div>
+          <div
+            className="form-group col-6"
+          >
+            <label
+              htmlFor="numOfChildrenInput"
+            >
+              Child(ren) 
+              <small>
+                <em>
+                  £6, £9 deluxe
+                </em>
+              </small>
+            </label>
+            <input
+              className="form-control"
+              id="numOfChildrenInput"
+              name="numOfChildrenInput"
+              onChange={[Function]}
+              type="number"
+            />
+          </div>
+        </div>
+        <label>
+          Concession(s)
+        </label>
+        <div
+          className="d-none"
+        >
+          <div
+            className="col-6"
+          >
+            <label>
+              Type
+            </label>
+          </div>
+          <div
+            className="col-4"
+          >
+            <label>
+              Size
+            </label>
+          </div>
+          <div
+            className="col-2"
+          >
+            <label>
+              Qty
+            </label>
+          </div>
+        </div>
+        <div
+          className="form-row"
+        >
+          <div
+            className="col-12"
+          >
+            <button
+              className="btn btn-outline-accent"
+              onClick={[Function]}
+              type="button"
+            >
+              + Add new concession
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-md-6 col-lg-4 order-md-2 order-1"
+        id="filmPosterDiv"
+      >
+        <img
+          alt="Selected film poster"
+          id="selFilmPoster"
+          src=""
+        />
+        <div
+          id="bookingTotalDiv"
+        >
+          <h4
+            className=""
+          >
+            <small>
+              Total:
+            </small>
+             
+            £0.00
+          </h4>
+          <div
+            className="d-none"
+          >
+            Invalid total amount
+          </div>
+          <button
+            className="btn btn-outline-light"
+            type="submit"
+          >
+            Proceed to payment
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+`;
