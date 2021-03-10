@@ -45,11 +45,11 @@ router.post("/create", (req, res, next) => {
 
 });
 
-router.delete("/delete/:id", (res, req, next) => {
+router.delete("/delete/:id", (req, res, next) => {
     film.findByIdAndDelete(req.params.id, (err) => {
         if (err) {
             next(err);
-        } res.statusCode(204).send('succesfully deleted')
+        } res.status(204).send('succesfully deleted')
 
 
     })
