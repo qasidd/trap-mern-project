@@ -1,0 +1,953 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Places Testing onSubmit Test it should match the snapshot every time it's rendered 1`] = `
+Array [
+  <section>
+    <div
+      className="container text-center"
+    >
+      <h2>
+        Bars
+      </h2>
+    </div>
+  </section>,
+  <br />,
+  <div
+    className="card-deck"
+  >
+    <div
+      className="card"
+    >
+      <img
+        alt="The Dockyard"
+        className="card-img-top"
+        src="Dockyard.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            The Dockyard
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+          The Dockyard is a unique gastropub/bar that is near by the Quays docks. Which excels in servering beers and ale tailored to customers needs as well as serving customers homemade artisan pies.
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts
+            </h5>
+            <p>
+              Partnering with QA Cinema we have selected offers for customers that have a vaild cinema ticket
+            </p>
+            <div>
+              <ul>
+                <li>
+                   On Tuesday 10% off food
+                </li>
+                <li>
+                   Buy 1 drinks get 1 for free 
+                </li>
+                <li>
+                  Groups of 6 get 2 large pies and 3 free drinks when spending over £35 on Fridays
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number:0161 713 3810 
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              DockHouse, Media City, Manchester, Salford M50 2EQ
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information
+              </p>
+            </div>
+            <a
+              href="https://dockyard.pub/media-city/"
+              target="_blank"
+            >
+              The Dockyard
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 6 months ago
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt="Craftbrew"
+        className="card-img-top"
+        src="Craf.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            CRAFTBREW
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+          Here at Craftbrew we are a modern contemporary cafe that excels in serving craft beer, wine and others drinks. To go with sandwiches, homemade taps and deli boards from the local butcher. 
+           
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts 
+            </h5>
+            <p>
+              With our partners QA Cinema we have selected offers and discounts, for customers that have a vaild cinema ticket
+            </p>
+            <div>
+              <ul>
+                <li>
+                   On Wednesdays 15% off food and drinks
+                </li>
+                <li>
+                   Buy 2 drinks get 1 for free 
+                </li>
+                <li>
+                  Spend £15 on drinks and get 2 free taps of your choice
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number: 01632 960107
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              Unit 1, Digital World Centre, Lowry Plaza, Manchester, The Quays, Salford M50 3UB
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information
+              </p>
+            </div>
+            <a
+              href="http://craftbrew-uk.com/"
+              target="_blank"
+            >
+              Craftbrew
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 1 month ago
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt="Alchemist"
+        className="card-img-top"
+        src="Alchemist.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            The Alchemist
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+           We love to create masterful cocktails to tantalise your taste buds and to capture all of your sense. Using theatre to server most of our drinks which is unconventional compare to traditional methods.
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts
+            </h5>
+            <p>
+              QA Cinema customers are entiled for selected discounts which are vaild for a limited amount of time
+            </p>
+            <div>
+              <ul>
+                <li>
+                   On Thursday 25% off food and drinks 
+                </li>
+                <li>
+                   Buy 1 drinks get 1 for free during lunch time 
+                </li>
+                <li>
+                   15% off for groups of 6
+                </li>
+                <li>
+                   Chemist Saturdays: 10% drinks or 10% food after spending £45 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number: 0161 872 7396
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              The Bund, The Quays, MediaCityUK,Manchester, Salford M50 3AB
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information
+              </p>
+            </div>
+            <a
+              href="https://thealchemist.uk.com/menus/"
+              target="_blank"
+            >
+              The Alchemist
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 27/08/2020
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <br />,
+  <div
+    className="container text-center"
+  >
+    <footer>
+      © Copyright 2021 QA Cinemas
+    </footer>
+  </div>,
+  <br />,
+  <section>
+    <div
+      className="container text-center"
+    >
+      <h2>
+        Activities
+      </h2>
+    </div>
+  </section>,
+  <br />,
+  <div
+    className="card-deck"
+  >
+    <div
+      className="card"
+    >
+      <img
+        alt="TeamSport Go-Karting Salford/Trafford Area"
+        className="card-img-top"
+        src="Race.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            TeamSport Go-Karting
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+          If you are in need for a fast pace enviroment in a small space. Well at TeamSport we offer a track to show off your racing skills. Just 10-15 minutes from Salford Quays docks you can put your foot to the metal to fuel your adrenaline and competitve edge.
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts
+            </h5>
+            <p>
+              Partnering with QA Cinema we have selected offers for customers that have a vaild cinema ticket
+            </p>
+            <div>
+              <ul>
+                <li>
+                   Children over the age of 12 race free on Wednesday
+                </li>
+                <li>
+                   50 laps for £24pp when you buy an action film 
+                </li>
+                <li>
+                   15% off on Fridays
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number:01252 732300
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              4, Wharfside Way, Trafford Park, Manchester M17 1NF
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information and to book a ticket
+              </p>
+            </div>
+            <a
+              href="https://www.team-sport.co.uk/go-karting-manchester-trafford/?utm_source=Google&utm_medium=Local"
+              target="_blank"
+            >
+              TeamSport Go-Karting
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 4 months ago
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt="Ice Skating arena for Manchester Ice Rink"
+        className="card-img-top"
+        src="ice.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            Manchester Ice Rink 
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+           Whatever the weather or season, enjoy skating at our ice rink offering a fun atmosphere for family, friends and couples. We have fun 25 minute classes to teach customers from all ages to learn how to skate. 
+           
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts 
+            </h5>
+            <p>
+              With our partners QA Cinema we have selected offers and discounts, for customers that have a vaild cinema ticket
+            </p>
+            <div>
+              <ul>
+                <li>
+                   Kids skate free on Tuesdays
+                </li>
+                <li>
+                   Buy 2 tickets get 1 free 
+                </li>
+                <li>
+                   10% off during national holidays
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number: 0161 820 9718
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              MediaCityUK Side of Orange Building, Salford, Manchester M50 2HE
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information about us and to book place
+              </p>
+            </div>
+            <a
+              href="http://www.manchestericerink.co.uk/"
+              target="_blank"
+            >
+              Manchester Ice Rink
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 1 month ago
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt="Manchester United Stadium Tour"
+        className="card-img-top"
+        src="ManU.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            Manchester United Museum & Stadium Tour
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+          Experience the magic of the "Theatre Of Dreams". Have an up close stadium and museum tour of Old Trafford by visting the trophy room, stand in the manager spot in the dug out and sit in the Home changing room at your favourite player peg. You can also vist the legends section to watch mini films about the clubs history and the legendary players that have played for Manchester United.
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts
+            </h5>
+            <p>
+              QA Cinema customers are entiled for selected discounts which are vaild for a limited amount of time
+            </p>
+            <div>
+              <ul>
+                <li>
+                   15% off when you buy products from the Museum 
+                </li>
+                <li>
+                   20% off the Manchester United store 
+                </li>
+                <li>
+                   A chance to sign up for a club membership and season ticket
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number: 0161 676 7770
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              Sir Matt Busby Way, Old Trafford, Stretford, Manchester M16 0RA
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information
+              </p>
+            </div>
+            <a
+              href="http://www.manutd.com/en/Visit-Old-Trafford.aspx"
+              target="_blank"
+            >
+              Manchester United Museum & Stadium Tour
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 07/01/2021
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <br />,
+  <div
+    className="container text-center"
+  >
+    <footer>
+      © Copyright 2021 QA Cinemas
+    </footer>
+  </div>,
+  <br />,
+  <section>
+    <div
+      className="container text-center"
+    >
+      <h2>
+        Restaurants
+      </h2>
+    </div>
+  </section>,
+  <br />,
+  <div
+    className="card-deck"
+  >
+    <div
+      className="card"
+    >
+      <img
+        alt="Lime bar and grill"
+        className="card-img-top"
+        src="Lime.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            Lime
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+          At the heart of the center of Salford Quays, just a mile away from the city center. We server food daily from breakfast, bruch or lunch and dinner. Our menu is a combination of Southern Style american food with a twist of Japnese food.
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts
+            </h5>
+            <p>
+              Partnering with QA Cinema we have selected offers for customers that have a vaild cinema ticket
+            </p>
+            <div>
+              <ul>
+                <li>
+                   10% off on all items on the menu on Tuesday
+                </li>
+                <li>
+                   Buy 2 large main meals get 10% off selected desserts 
+                </li>
+                <li>
+                   10% off for a 3 course meal pp on Wednesday 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number:0161 869 0440
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              Unit G1, The Quays, Manchester, Salford M50 3AG
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information about food and the menu
+              </p>
+            </div>
+            <a
+              href="http://www.limeuk.com/"
+              target="_blank"
+            >
+              Lime
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 8 months ago
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt="Cafe Rouge at Salford Quays"
+        className="card-img-top"
+        src="Rouge.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            Café Rouge
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+           Join us for a taste of culture and good food done right. Whatever the time of day, we have a fine dish for you to help your cravings. From classic french/parisan food, steak with fries and beef bourguigon. At Cafe Rouge we are a french restaurant with a twist.
+           
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts 
+            </h5>
+            <p>
+              With our partners QA Cinema we have selected offers and discounts, for customers that have a vaild cinema ticket
+            </p>
+            <div>
+              <ul>
+                <li>
+                   On Mondays 10% off food and drinks
+                </li>
+                <li>
+                   2 for 1 specials for brunch 
+                </li>
+                <li>
+                   Spend £25 on food and get a dessert for free
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number: 0161 549 2173
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              The Lowry Outlet Mall, Unit G40B, Manchester, Salford M50 3AZ
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information
+              </p>
+            </div>
+            <a
+              href="https://www.caferouge.com/bistro-brasserie/manchester/salford-quays"
+              target="_blank"
+            >
+              Café Rouge
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 2 weeks ago
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        alt="Pier Eight resturant Salford Quays"
+        className="card-img-top"
+        src="Pier.jpg"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title h5"
+          >
+            Pier Eight Restaurant
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+           Want to indulge in fine dining, well at Pier Eight we server fresh, British food using seasonal ingredients. It is the perfect bar if you want to enjoy your food whilst looking at the stunning waterside setting od Salford Quays.
+        </p>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Offers & Discounts
+            </h5>
+            <p>
+              QA Cinema customers are entiled for selected discounts which are vaild for a limited amount of time
+            </p>
+            <div>
+              <ul>
+                <li>
+                   On Thursday 20% off food and drinks 
+                </li>
+                <li>
+                   Show-Time Special: Buy 2 drinks get a free starter after 6pm 
+                </li>
+                <li>
+                   Pier Special: 10% drinks or 10% food after spending £35 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div
+            className="container text-center"
+          >
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              Telephone Number: 0161 876 3443 
+            </p>
+            <h6>
+              Our Address:
+            </h6>
+            <p>
+              Inside The Lowry, Manchester, Salford M50 3AZ
+            </p>
+            <div>
+              <h5>
+                Vist Our Website
+              </h5>
+              <p>
+                For more information
+              </p>
+            </div>
+            <a
+              href="http://www.piereightrestaurant.co.uk/"
+              target="_blank"
+            >
+              Pier Eight restaurant
+            </a>
+          </div>
+        </section>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 27/08/2020
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <br />,
+  <div
+    className="container text-center"
+  >
+    <footer>
+      © Copyright 2021 QA Cinemas
+    </footer>
+  </div>,
+]
+`;

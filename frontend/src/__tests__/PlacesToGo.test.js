@@ -2,26 +2,19 @@
 import PlacesToGo from "../components/PlacesToGo/PlacesToGo";
 import {render} from '@testing-library/react';
 import userEvent from '@testing-library/user-event'; 
+import {create} from 'react-test-renderer';
 
 describe(`Places Testing`, () => {
     describe(`onSubmit Test`, () =>{
 
         //Create the fake function: 
         const mockSubmit = jest.fn();
-        const view = "Bars"; 
+        const info = "Bars"; 
 
-        it(`Should pull info and images of bars`, () => {
+        it(`it should match the snapshot every time it's rendered`, () => {
+            const instance = create(<PlacesToGo/>).toJSON();
+            expect(instance).toMatchSnapshot();
 
-            //arraging 
-            const {container} = render(<PlacesToGo/>);
-            const barsInput = container.querySelector(`[input=Bars]`);
-            expect(barsInput.value).toEqual(``);
-
-            //act - simulated typing
-            userEvent.hover(barsInput, data);
-
-            //assert
-            expect(barsInput.value).toEqual(data);
 
         })
 
