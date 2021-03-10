@@ -8,6 +8,10 @@
     background-color: var(--main-bg-colour);
 }
 
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <!-- Navbar content -->
+</nav>
+
 .mainContent {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -111,6 +115,20 @@ a {
     .filmModal .modal-body img {
         margin-left: 64%;
     }
+}
+
+
+.filmModal a[href*="new-booking"] {
+    color: #fff !important;
+}
+
+.filmModal a[href*="new-booking"]:hover {
+    color: var(--main-accent-colour-dark) !important;
+}
+
+#screeningsOverflowDiv {
+    overflow: auto;
+    max-height: 160px;
 }
 
 /* Booking */

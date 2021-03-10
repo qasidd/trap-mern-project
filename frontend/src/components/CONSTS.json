@@ -1,5 +1,8 @@
 {
+    "BASE_URL": "http://localhost:3000",
     "FILM_URL": "http://localhost:5019/film",
     "BOOKING_URL": "http://localhost:5019/bookings",
-    "Forum_URL":"http://localhost:5019/forum"
+    "Forum_URL":"http://localhost:5019/forum",
+    "CONTACT_URL": "http://localhost:5019/contact",
+    "STRIPE_URL": "http://localhost:5019/stripe"
 }
