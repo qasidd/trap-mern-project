@@ -16,6 +16,8 @@ import { ImageBackground, StyleSheet, Text, View } from "react";
 import GettingThere from './components/Getting-There/GettingThere';
 import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 import NewBooking from './components/Booking/NewBooking';
+import Search from './components/SearchBar/Search';
+import Searchable from './components/SearchBar/Searchable';
 import PaymentSuccess from './components/Booking/PaymentSuccess';
 import PaymentCancelled from './components/Booking/PaymentCancelled';
 import Screenparent from './components/Screens/screenparent';
@@ -66,17 +68,8 @@ function App() {
           <Route path="/new-booking/cancelled" component={PaymentCancelled} />
         </Switch>
       </Router>
-      {/*<Classifications /> */}
-      {/* <ListingsGallery /> */}
-      {/* <ContactForm /> */}
-      {/* <OpeningTime/> */}
-      {/* <NewReleasesGallery /> */}
-      {/* <OpeningTime/> */}
-      {/* <NewBooking /> */}
-      {/* <PaymentForm /> */}
-      {/* <CardForm /> */}
-      {/* <GettingThere/> */}
-      {/* <NewBooking /> */}
+      <Searchable/>
+     
     </div>
   );
 }
