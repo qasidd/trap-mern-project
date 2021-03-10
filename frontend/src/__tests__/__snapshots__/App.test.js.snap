@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test of APP it should match the snapshot everytime it's rendered 1`] = `
+<div
+  className="App"
+>
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-light"
+  >
+    <a
+      class="navbar-brand"
+    >
+      QA Cinemas
+    </a>
+    <button
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      class="navbar-toggler"
+      data-target="#navbarNavAltMarkup"
+      data-toggle="collapse"
+      type="button"
+    >
+      <span
+        class="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNavAltMarkup"
+    >
+      <div
+        class="navbar-nav"
+      >
+        <a
+          className="btn btn-outline-info"
+          href="/"
+          onClick={[Function]}
+        >
+          Home 
+          <span
+            class="sr-only"
+          >
+            (current)
+          </span>
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/listings-gallery"
+          onClick={[Function]}
+        >
+          Gallery
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/new-releases"
+          onClick={[Function]}
+        >
+          New Releases
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/opening-times"
+          onClick={[Function]}
+        >
+          Opening Times
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/classification"
+          onClick={[Function]}
+        >
+          Classifications
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/screens"
+          onClick={[Function]}
+        >
+          Screens
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/new-booking"
+          onClick={[Function]}
+        >
+          Bookings
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/location"
+          onClick={[Function]}
+        >
+          Getting Here
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/placestogo"
+          onClick={[Function]}
+        >
+          Places to Go
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/about"
+          onClick={[Function]}
+        >
+          About
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/contactus"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+        <a
+          className="btn btn-outline-info"
+          href="/discussion"
+          onClick={[Function]}
+        >
+          Discussion Board
+        </a>
+      </div>
+    </div>
+  </nav>
+  <h1>
+     Welcome to QA Cinemas! 
+  </h1>
+  <br />
+  <img
+    alt="this is a logo"
+    src="logo.jpg"
+  />
+  <h2>
+     Redefining the cinema experience 
+  </h2>
+  <br />
+  <p>
+     This is the homepage for QA cinemas. This page will provide information about movies, listings and upcoming releases. 
+  </p>
+  <h3>
+     Page Under Construction 
+  </h3>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+`;
