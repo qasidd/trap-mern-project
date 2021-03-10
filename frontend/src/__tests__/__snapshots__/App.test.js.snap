@@ -1,6 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`It should match the snapshot every time it's rendered 1`] = `
+exports[`Snapshot test of APP it should match the snapshot everytime it's rendered 1`] = `
 <div
   className="App"
 >
