@@ -2,6 +2,7 @@ import {useState} from 'react';
 import SearchList from './SearchList';
 import Search from './Search';
 import SearchInfo from './SearchInfo.json';
+import { Modal } from 'react-bootstrap';
 
 const Searchable = () =>{
     

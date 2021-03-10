@@ -1,5 +1,5 @@
+
 const SearchList = ({ list, query }) => {
-    // console.log(list);
 
     const byQuery = (query) => (list) => list.Descrption.toLowerCase().includes(query.toLowerCase());
 
@@ -7,8 +7,6 @@ const SearchList = ({ list, query }) => {
 
     filteredList = list.filter(byQuery(query));
 
-
-    // console.log(filteredList);
 
     return (
         <>
