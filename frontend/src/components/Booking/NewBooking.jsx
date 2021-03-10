@@ -171,7 +171,7 @@ const NewBooking = (props) => {
     return (
         <div className="mainContent container">
             <h1 className="display-4">New Booking</h1>
-            <form className="mt-3 bookingForm" onSubmit={handleSubmit}>
+            <form className="bookingForm" onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-md-6 col-lg-8 order-md-1 order-2">
                         <div className="form-group">
