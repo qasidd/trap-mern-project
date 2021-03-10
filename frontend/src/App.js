@@ -68,7 +68,7 @@ function App() {
           <Route path="/new-booking/cancelled" component={PaymentCancelled} />
         </Switch>
       </Router>
-      <Searchable/>
+      {/* <Searchable/> */}
      
     </div>
   );
