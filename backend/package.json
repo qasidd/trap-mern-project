@@ -6,7 +6,6 @@
   "scripts": {
     "test": "mocha __tests__/",
     "coverage": "nyc npm test",
-
     "start": "nodemon expressindex.js"
   },
   "repository": {
