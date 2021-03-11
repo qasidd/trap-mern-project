@@ -11,20 +11,22 @@ const ContactForm = () => {
     return (
         <div className="container mainContent">
             <h1 className="display-4 mb-3">Contact Us</h1>
-            <div>
-                <h5>Address</h5>
-                <p> 8, St James's Bldg, 61-95 Oxford St, Manchester M1 6FQ</p>
-                <h5><em>Contact number</em></h5>
-                <p>Phone: 0845 757 3888</p>
-
-                <p>Please use the form below if you would like to contact our UK Head Office.
-             By completing this form you consent to us contacting you related to this enquiry.</p>
+            <div className="row">
+                <div className="col-6">
+                    <h5>Address</h5>
+                    <p className="mb-0"> 8, St James's Building</p>
+                    <p className="mb-0">61-95 Oxford St</p>
+                    <p>Manchester M1 6FQ</p>
+                </div>
+                <div className="col-6">
+                    <h5>Contact number</h5>
+                    <p>Phone: 0845 757 3888</p>
+                </div>
             </div>
-            {/* <div className="row">
-                <div className="col-md-6"> */}
-                    <CreateContact trigger={trigger} />
-                {/* </div>
-            </div> */}
+            <p>Please use the form below if you would like to contact our UK Head Office.
+             By completing this form you consent to us contacting you related to this enquiry.</p>
+
+            <CreateContact trigger={trigger} />
         </div>
 
     )
