@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should match the snapshot every time it's rendered 1`] = `
+<div
+  className="mainContent container"
+>
+  <h1
+    className="display-4"
+  >
+    Upcoming Showings
+  </h1>
+  <div
+    className="row mt-4"
+  >
+    <div
+      className="col-12 text-center"
+    >
+      <p>
+        Loading...
+      </p>
+      <div
+        animation="border"
+        className="spinner-border"
+        role="status"
+      >
+        <span
+          className="sr-only"
+        >
+          Loading...
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

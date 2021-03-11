@@ -8,7 +8,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-
 //importing all of methods
 const FilmRoute = require('./router/film.js');
 app.use("/film",FilmRoute);
@@ -40,4 +39,5 @@ app.use((err,req,res,next)=>{
 //const server = app.listen
 
 const server = app.listen(5019, () =>{ console.log(`server was succesfully started on port number: ${server.address().port}`)} );
-module.exports = server 
+
+module.exports = server;

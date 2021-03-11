@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should match the snapshot every time it's rendered 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-md-3"
+  >
+    <div
+      className="bg-light border-right"
+      id="sidebar"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="card-body"
+        >
+          <div
+            className="card-title"
+          >
+            Create New Post
+          </div>
+          <form
+            onSubmit={[Function]}
+          >
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Username"
+              type="text"
+              value=""
+            />
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Movietitle"
+              type="text"
+              value=""
+            />
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Comment"
+              type="text"
+              value=""
+            />
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Rating"
+              type="number"
+              value={0}
+            />
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Created"
+              type="date"
+              value=""
+            />
+            <br />
+            <button
+              className="btn btn-outline-success col-md-12"
+              type="submit"
+            >
+              Post
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="col-md-9"
+    >
+      <div
+        className="alert alert-success"
+      >
+        
+      </div>
+      <div
+        animation="border"
+        className="spinner-border"
+        role="status"
+      >
+        <span
+          className="sr-only"
+        >
+          Loading...
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

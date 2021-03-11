@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should match the snapshot every time it's rendered 1`] = `
+Array [
+  <section>
+    <div
+      className="container text-center"
+    >
+      <h2>
+        Screens
+      </h2>
+    </div>
+  </section>,
+  <br />,
+  <div>
+    <div
+      className="card"
+    >
+      <img
+        className="card-img"
+        length="600"
+        src="Standardscreenseatingplan.png"
+        variant="top"
+        width="500"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title"
+          >
+            Seating plan for Standard screen
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+          Here you can see a layout of our Standard viewing Screens
+        </p>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 6 months ago
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        className="card-img"
+        length="600"
+        src="Standard screen decor.jpg"
+        variant="top"
+        width="500"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title"
+          >
+            Interior of our Standard Screens
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+          Here you can see the interior of our Standard viewing screens. 
+           
+        </p>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 1 month ago
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        className="card-img"
+        length="600"
+        src="deluxe screen seating plan.png"
+        variant="top"
+        width="500"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title"
+          >
+            The Seating plan for our Deluxe Directors Box seats
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+           Here you can see the seating plan for our premier Directors Box Seats
+        </p>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 27/08/2020
+          </small>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <img
+        className="card-img"
+        length="600"
+        src="deluxe screen decor.jpg"
+        variant="top"
+        width="500"
+      />
+      <div
+        className="card-body"
+      >
+        <div
+          className="container text-center"
+        >
+          <div
+            className="card-title"
+          >
+            The Interior for our Deluxe Directors Box seats
+          </div>
+        </div>
+        <p
+          className="card-text"
+        >
+           Here you can see the Layout and decor of our premier Directors Box Seats
+        </p>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <div
+          className=" container text-center"
+        >
+          <small
+            className="text-muted"
+          >
+            Last updated 27/08/2020
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
