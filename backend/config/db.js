@@ -49,7 +49,7 @@ const ForumSchema = new Schema({
     });
 
     const forum = model('forum',ForumSchema)
-mongoose.connect(Test_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+mongoose.connect(LIVE_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) { console.error(err); } else { console.log('Connected') }
 });
 
