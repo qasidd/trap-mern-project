@@ -2,7 +2,7 @@ import { BASE_URL } from '../CONSTS.json';
 
 const FooterComponent = () => {
     return (
-        <div id="footer">
+        <footer id="footer">
             <div className="container">
                 <div className="row">
                     <div className="col-6">
@@ -16,7 +16,7 @@ const FooterComponent = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 }
 

@@ -7,9 +7,10 @@ import Food from "./Food";
 
 const PlacesToGo = () => {
     return (
-        <>
+        <div className="container mainContent">
+            <h1 className="display-4">Places To Go</h1>
             <section>
-                <div className="container text-center">
+                <div className="text-center">
                     <h2>Bars</h2>
                 </div>
             </section>
@@ -18,7 +19,7 @@ const PlacesToGo = () => {
 
             <br></br>
             <section>
-                <div className="container text-center">
+                <div className="text-center">
                     <h2>Activities</h2>
                 </div>
             </section>
@@ -27,13 +28,13 @@ const PlacesToGo = () => {
 
             <br></br>
             <section>
-                <div className="container text-center">
+                <div className="text-center">
                     <h2>Restaurants</h2>
                 </div>
             </section>
             <br></br>
             <Food/>
-        </>
+        </div>
     );
 }
 

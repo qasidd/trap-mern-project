@@ -11,17 +11,18 @@ const Discussionboard = () => {
     }
 
     return (
-        <div className="row">
-            <div className="col-md-3">
-                <CreatePost trigger={trigger} />
-            </div>
-            <div className="container">
+        <div className="container mainContent">
+            <h1 className="display-4 mb-4">Discussion Board</h1>
+            <div className="row">
+                <div className="col-md-3">
+                    <CreatePost trigger={trigger} />
+                </div>
                 <div className="col-md-9">
                     <div className="alert alert-success">{msg}</div>
-                    <ReadPost msg={msg} trigger={trigger}/>
+                    <ReadPost msg={msg} trigger={trigger} />
                 </div>
             </div>
         </div>
     )
 }
-export default Discussionboard; 
+export default Discussionboard;

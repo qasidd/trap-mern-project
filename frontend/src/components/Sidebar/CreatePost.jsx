@@ -51,7 +51,7 @@ const CreatePost  = ({trigger}) => {
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Movietitle"
+                                placeholder="Movie title"
                                 value={movietitle}
                                 onChange={({ target }) => setMovietitle(target.value)}
                             />
