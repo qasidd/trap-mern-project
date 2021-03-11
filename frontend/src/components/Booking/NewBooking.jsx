@@ -4,12 +4,9 @@ import axios from 'axios';
 import { FILM_URL, BOOKING_URL, STRIPE_URL } from '../CONSTS.json';
 import ConcessionInput from './ConcessionInput';
 import { loadStripe } from "@stripe/stripe-js";
-// Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
-// const stripePromise = loadStripe("pk_test_51IQCoXLkbOx0gq9RTzFXzEKFOhDnWUqOA8mtbrQPoOixCTUSUzsqldQLcdpsOzTM0DSGwxSoey80OTGF8AjSFnHI00Ay4P4Qlb");
 
-const NewBooking = (props) => {
+const NewBooking = () => {
 
     const [filmList, setFilmList] = useState([]);
     const [selFilmObject, setSelFilmObject] = useState(null);
@@ -91,7 +88,7 @@ const NewBooking = (props) => {
             "adult": adults,
             "child": children,
             "concessions": concessions,
-            "total": total.toFixed(2),
+            "total": total,
             "paymentsuccess": false
         }
 
@@ -105,10 +102,8 @@ const NewBooking = (props) => {
     };
 
     const toCheckout = async (newBookingData) => {
-        // Get Stripe.js instance
         const stripe = await stripePromise;
 
-        // Call your backend to create the Checkout Session
         const response = await fetch(
             `${STRIPE_URL}/create-checkout-session`,
             {
@@ -122,15 +117,12 @@ const NewBooking = (props) => {
 
         const session = await response.json();
 
-        // When the customer clicks on the button, redirect them to Checkout.
         const result = await stripe.redirectToCheckout({
             sessionId: session.id,
         });
 
         if (result.error) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer
-            // using `result.error.message`.
+            console.log(result.error);
         }
     };
 
