@@ -4,14 +4,14 @@
 This repository is to show the development and creation of an advance website application for a selected cinema franchise, using the full MERN stack principle. Which involves the use of: **Mongo DB**, **Express**, **React** and **Node.JS**. The frontend of the application will be built using React with CSS styling, while the backend will be built using Mongo/Mongoose, Express and Node. The functionality of our code is tested using **Chai**, **Istanbul** and **Mocha**. To determine if we reach test coverage that is ideal for industry standards. Overall, this README file will give you the neccessary information to obtain a working version of this application on your local machine. 
 
 ### Test Coverage: 
-~
-
+- 91.3% 
 
 ## Aim Of The Project
- * As a team creating a full stack website application using MERN and other methods that were taught to us during our time at QA Academy. 
- * Using a specification given to use by a client highlight the **Minimum Value Product(MVP)** which will help in the design of the website. 
- * Use wireframe.cc to plan the website pages. 
- * Work in agile mindset when developing the website.  
+ - As a team creating a full stack website application using MERN and other methods that were taught to us during our time at QA Academy. 
+ - Using a specification given to use by a client highlight the **Minimum Value Product(MVP)** which will help in the design of the website. 
+ - Use wireframe.cc to plan the website pages. 
+ - Working in agile mindset when developing the website.
+ - Testing certain aspects of the website. 
 
 
 ## Getting Started
@@ -62,7 +62,36 @@ This section gives a list of instructions that are needed to download the softwa
  - *Please see the Deployment/Running The Application*
 
 ## Testing 
- - For testing.. 
+ In terms of testing the whole web application. Two types of testing were done. 
+ 
+ Firstly, for the backend express testing was done which involves **Mocha**, **Chai** and **Istanbul**. This testing methods helps us determine the functionality of the backend. 
+
+ The second test that was applied onto the website is snapshot testing, to see how well the components of the frontend work as well. This is mostly done with **Jest**. 
+
+ ### Testing Deployment
+ For deployment in terms of testing, make sure you are in the correct working directory i.e. **cd** into the correct folder. 
+
+ **To run backend testing**
+
+```bash
+-cd backend
+npm install
+npm test*
+npm run coverage 
+```
+
+*Note:*
+- *Make sure you install Mocha, Chai, Istanbul into your package.json file. Using the command **(npm install --save mocha)** for example.*
+
+**To run frontend testing**
+
+```bash
+-cd backend
+npm install
+npm test*
+```
+*Note:*
+- *Make sure you install jest **(npm install jest)** to help with snapshot testing* 
 
 ## Further Contribution
 Please feel free to contribute by adding new features to this project:
@@ -120,9 +149,17 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 ### References
  - **React Strap/BootStrap for React**. *Available at: https://react-bootstrap.github.io/* 
  - **React Semantic UI**. *Available at: https://react.semantic-ui.com/*
+ - **The design of the email contact**. *Available at: https://tylerkrys.ca/blog/adding-nodemailer-email-contact-form-node-express-app*
+ - **Payment and Checkout Form**. *Available at:https://stripe.com/docs/checkout/integration-builder*
+ - **For film classification and ratings**. *Available at: bbfc.co.uk*
+ - **Advice on coding**. *Available at: https://stackoverflow.com/*
  
 ### Acknowledgments
  - QA Academy 
  - Savannah Vaith
+ - QA Training team
+ - QA-Community
+ - Team Trap (Project Team at the Academy)
+ - GitHub
  
 
