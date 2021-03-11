@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It should match the snapshot every time it's rendered 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title"
+    >
+      Contact us Form
+    </div>
+    <form
+      id="contact-form"
+      method="post"
+      onSubmit={[Function]}
+      role="form"
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        placeholder="Full name"
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        className="form-control"
+        onChange={[Function]}
+        placeholder="Email"
+        required={true}
+        type="email"
+        value=""
+      />
+      <input
+        className="form-control"
+        onChange={[Function]}
+        placeholder="Subject"
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        className="form-control"
+        cols="35"
+        onChange={[Function]}
+        placeholder="Message"
+        required={true}
+        rows="12"
+        type="text"
+        value=""
+      />
+      <br />
+      <button
+        className="btn btn-outline-success col-md-12"
+        type="submit"
+      >
+        Send
+      </button>
+      <button
+        className="btn btn-outline-success col-md-12"
+        onClick={[Function]}
+        type="reset"
+      >
+        Clear
+      </button>
+    </form>
+  </div>
+</div>
+`;
