@@ -54,7 +54,12 @@ The required software:
 ## Installation
 This section gives a list of instructions that are needed to download the software to get a devlopment environment running, which are listed in the prerequisites section of the README. 
 
- 1. 
+ 1. Once clonning the repository, open the folder or add the folder into the workspace on **Visual Studio Code**. 
+ 2. Double check that the **node_modules** folder for both backend and frontend have been installed. 
+ 3. Open an intergrated terminal and run the command `npm install` to install all the packages to the local machine.
+
+ *For extra information:*
+ - *Please see the Deployment/Running The Application*
 
 ## Testing 
  - For testing.. 
@@ -81,7 +86,7 @@ npm start
 ```
 
 *Note:* 
-- *The application will open on a new server port i.e. http://localhost:3000/*
+- *The application will open on a new server port i.e. http://localhost:5019/*
 - *It is crucial to use the command `npm install` or `npm i` to have all the node modules, package-lock.json and package.json files added to the local machine*
 
 Most of the frontend is built using React with CSS and other packages such as reactstrap. 
@@ -95,7 +100,7 @@ npm start
 ```
 
 *Note:* 
-- *The application will open on a new server port i.e. http://localhost:3001/*
+- *The application will open on a new server port i.e. http://localhost:3000/*
 - *It is crucial to use the command `npm install` or `npm i` to have all the node modules, package-lock.json and package.json files added to the local machine*
 
 
