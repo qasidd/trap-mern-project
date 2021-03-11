@@ -34,18 +34,18 @@ router.post("/create",profanity.init, (req, res, next) => {
 
 });
 
-router.delete("/delete/:id", (res, req, next) => {
+router.delete("/delete/:id", (req, res, next) => {
     forum.findByIdAndDelete(req.params.id, (err) => {
         if (err) {
             next(err);
-        } res.statusCode(204).send('succesfully deleted')
+        } res.status(204).send('succesfully deleted')
 
 
     })
 });
 
 router.patch("/update/:id", (req, res, next) => {
-    forum.findByIdAndUpdate(req, params.id,
+    forum.findByIdAndUpdate(req.params.id,
         req.body,
         { new: true },
         (err, result) => {
@@ -64,7 +64,7 @@ router.put("/replace/:id", (req, res, next) => {
         rating,
         created
     } = req.body;
-    booking.findByIdAndUpdate(req.params.id, {
+    forum.findByIdAndUpdate(req.params.id, {
         username,
 movietitle,
 comment,

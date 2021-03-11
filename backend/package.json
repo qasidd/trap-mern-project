@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha __tests__/",
     "coverage": "nyc npm test",
+
     "start": "nodemon expressindex.js"
   },
   "repository": {
@@ -15,14 +16,17 @@
   "author": "Waleed",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.3",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-errors": "^1.8.0",
+    "mocha": "^8.3.1",
     "mongoose": "^5.11.17",
     "morgan": "^1.10.0",
+    "nodemailer": "^6.5.0",
     "nodemon": "^2.0.7",
     "profanity-middleware": "^0.3.0",
-    "nodemailer": "^6.5.0",
     "stripe": "^8.137.0"
   },
   "devDependencies": {

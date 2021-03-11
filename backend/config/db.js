@@ -1,6 +1,8 @@
 'use strict'
 
 const mongoose = require('mongoose');
+
+const { Test_URL } = require('./creds');
 const { TEST_URL, LIVE_URL } = require('../config/CONSTS.json');
 const { Schema, model } = mongoose;
 
@@ -45,8 +47,9 @@ const ForumSchema = new Schema({
     created : Date
     
     });
-    const forum = model('forum',ForumSchema);
-mongoose.connect(`${TEST_URL}`, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
+
+    const forum = model('forum',ForumSchema)
+mongoose.connect(Test_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
     if (err) { console.error(err); } else { console.log('Connected') }
 });
 

@@ -78,7 +78,7 @@ router.put("/replace/:id", (req, res, next) => {
         director,
         cast
     } = req.body;
-    booking.findByIdAndUpdate(req.params.id, {
+    film.findByIdAndUpdate(req.params.id, {
         title,
         releasedate,
         runtime,
