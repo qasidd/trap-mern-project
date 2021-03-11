@@ -22,6 +22,7 @@ return(
    <Link to ="/about" className="btn btn-outline-info" >About</Link> 
    <Link to ="/contactus" className="btn btn-outline-info" >Contact Us</Link> 
    <Link to ="/discussion" className="btn btn-outline-info" >Discussion Board</Link> 
+   <Link to="/search" className="btn btn-outline-info">Search</Link>
     </div>
   </div>
 </nav>
