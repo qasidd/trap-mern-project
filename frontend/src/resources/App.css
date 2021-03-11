@@ -1,5 +1,6 @@
 :root {
-    --main-bg-colour: #0101;
+    --main-bg-colour: rgba(0, 17, 0, 0.067);
+    --main-bg-colour-dark: rgba(0, 17, 0, 0.07);
     --main-accent-colour: #FF6033;
     --main-accent-colour-dark: #c44824;
 }
@@ -23,6 +24,11 @@ a {
 
 .mainContent .nav-item a {
     color: var(--main-accent-colour);
+}
+
+/* Nav */
+.navbar {
+    background-color: var(--main-bg-colour-dark);
 }
 
 .galleryPoster {

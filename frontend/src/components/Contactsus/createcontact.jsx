@@ -83,7 +83,7 @@ const CreateContact = ({ trigger }) => {
                         <button type="submit" className="btn btn-outline-success w-100">Send</button>
                         </div>
                         <div className="col-6">
-                        <button type="reset" className="btn btn-outline-success w-100" onClick={ClearValues} >Clear</button>
+                        <button type="reset" className="btn btn-outline-warning w-100" onClick={ClearValues} >Clear</button>
                         </div>
                     </div>
                 </form>

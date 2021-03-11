@@ -148,10 +148,6 @@ const Bars = () => {
             </CardDeck>
 
             <br></br>
-            <div className="container text-center">
-                <footer>&copy; Copyright 2021 QA Cinemas</footer>
-            </div>
-
         </>
     )
 
