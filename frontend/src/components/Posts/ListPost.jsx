@@ -8,13 +8,12 @@ const PostList = ({ post, trigger }) => {
         // <Card>
         <div className="p-6 my-2 rounded">
             <Toast>
-                <ToastHeader>{post.username}
-                </ToastHeader>
+                <ToastHeader>{post.username}</ToastHeader>
                 <ToastBody style={{ height: "auto" }}>
-                    {post.movietitle}
-                    {post.rating}
-                    {post.comment}
-                    {post.created}
+                    <p className="mb-1">Movie: {post.movietitle}</p>
+                    <p className="mb-1">Rating: {post.rating}</p>
+                    <p className="mb-1">{post.comment}</p>
+                    <p>{post.created}</p>
                     <hr />
                     <br></br>
                     

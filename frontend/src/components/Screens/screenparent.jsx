@@ -2,15 +2,11 @@ import Screens from "./screens"
 
 const Screenparent = () => {
     return (
-        <>
-        <section>
-            <div className="container text-center">
-            <h2>Screens</h2>
-            </div>
-        </section>
-        <br></br>
-        <Screens/>
-        </>
+        <div className="container mainContent">
+            <h1 className="display-4">Screens</h1>
+            <br></br>
+            <Screens />
+        </div>
     );
 }
 
