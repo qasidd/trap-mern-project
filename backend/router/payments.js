@@ -1,4 +1,3 @@
-// const stripe = require('stripe')('pk_test_51IQCoXLkbOx0gq9RTzFXzEKFOhDnWUqOA8mtbrQPoOixCTUSUzsqldQLcdpsOzTM0DSGwxSoey80OTGF8AjSFnHI00Ay4P4Qlb');
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 const router = require('express').Router();
 
@@ -6,6 +5,7 @@ const cinemaDomain = 'http://localhost:3000';
 
 router.post('/create-checkout-session', async (req, res) => {
     const bookingData = req.body;
+    console.log(bookingData.total);
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items: [
@@ -21,7 +21,7 @@ router.post('/create-checkout-session', async (req, res) => {
                             "Number of seats": bookingData.nofseats
                         }
                       },
-                      unit_amount: bookingData.total * 100,
+                      unit_amount: (bookingData.total * 100).toFixed(0),
                 },
                 quantity: 1,
             },
