@@ -1,25 +1,25 @@
 # Cinema Web Application Project 
 
 ## Project Description
-This repository is to show the development and creation of an advance website application for a selected cinema franchise, using the full MERN stack principle. Which involves the use of: **Mongo DB**, **Express**, **React** and **Node.JS**. The frontend of the application will be built using React with CSS styling, while the backend will be built using Mongo/Mongoose, Express and Node. The functionality of our code is tested using **Chai**, **Istanbul** and **Mocha**. To determine if we reach test coverage that is ideal for industry standards. Overall, this README file will give you the neccessary information to obtain a working version of this application on your local machine. 
+This repository is to show the development and creation of a cinema website application for a selected cinema franchise, using the full MERN stack principle. Which involves the use of specific technologies such as : **Mongo DB**, **Express**, **React** and **Node.JS**. The frontend of the application will be built using React with some CSS styling, while the backend will be built using Mongo/Mongoose, Express and Node. After the development of the website. The functionality of our code is tested using express testing methods which are: **Chai**, **Istanbul** and **Mocha**. To determine if we reach test coverage that is ideal for industry standards. Also, the frontend of the website will be tested usinh jest. Overall, this README file will give you the neccessary information to obtain a working version of this application on your local machine. 
 
 ### Test Coverage: 
 - 91.3% 
 
 ## Aim Of The Project
- - As a team creating a full stack website application using MERN and other methods that were taught to us during our time at QA Academy. 
- - Using a specification given to use by a client highlight the **Minimum Value Product(MVP)** which will help in the design of the website. 
+ - As a team create a full stack website application using MERN and other methods that were taught to us during our time at QA Academy. 
+ - Using a specification given to use by a client highlight the **Minimum Value Product(MVP)** which will help in the design of the website.
  - Use wireframe.cc to plan the website pages. 
  - Working in agile mindset when developing the website.
  - Testing certain aspects of the website. 
 
 
 ## Getting Started
-The instructions below will help you get a version of this project up and running in a local environment or on ypur local machine for developing and testing purposes. Please see the **Prerequisites** section of this README and the deployment section for further details about setting up the live environment. 
+The instructions below will help you get a version of this project up and running in a local environment or on ypur local machine for developing and testing purposes. Please see the **Prerequisites** section of this README and the **Deployment section** for further details about setting up the live environment. 
 
 ## Prerequisites
-The information below are the required software needed to host this project on your local environment/machine, With links and resources to their URL to download the software. 
-Check the download section of the README, to install the neccessary software by following the weblinks.
+The information below are the required software needed to host this project on your local environment/machine, With links and resources to their URL to Download the software. 
+Check the **Downloads** section of the README, to install the neccessary software by following the weblinks.
 
 The required software:
 - **Version Control System: Git**
