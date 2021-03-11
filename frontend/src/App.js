@@ -12,15 +12,14 @@ import './resources/App.css';
 import Nav from "./components/Routing/Nav";
 import About from './components/About/About';
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react";
 import GettingThere from './components/Getting-There/GettingThere';
 import PlacesToGo from './components/PlacesToGo/PlacesToGo';
 import NewBooking from './components/Booking/NewBooking';
-import Search from './components/SearchBar/Search';
 import Searchable from './components/SearchBar/Searchable';
 import PaymentSuccess from './components/Booking/PaymentSuccess';
 import PaymentCancelled from './components/Booking/PaymentCancelled';
 import Screenparent from './components/Screens/screenparent';
+import FooterComponent from './components/Footer/FooterComponent';
 
 function App() {
   return (
@@ -70,9 +69,8 @@ function App() {
           <Route path="/new-booking/success" component={PaymentSuccess} />
           <Route path="/new-booking/cancelled" component={PaymentCancelled} />
         </Switch>
+        <FooterComponent />
       </Router>
-      {/* <Searchable/> */}
-     
     </div>
   );
 }

@@ -188,3 +188,20 @@ a {
 #bookingTotalDiv [type="submit"]:hover {
     color: var(--main-accent-colour)
 }
+
+/* Footer */
+
+#footer {
+    background-color: var(--main-accent-colour);
+    color: #fff;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#copyrightMessage {
+    margin-bottom: 0;
+}
+
+#footer a {
+    color: #fff !important;
+}
