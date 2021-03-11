@@ -10,19 +10,19 @@ return(
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-   <Link to ="/"  className="btn btn-outline-info" >Home <span class="sr-only">(current)</span></Link>
-   <Link to ="/listings-gallery" className="btn btn-outline-info" >Gallery</Link> 
-   <Link to ="/new-releases" className="btn btn-outline-info" >New Releases</Link>
-   <Link to ="/opening-times" className="btn btn-outline-info">Opening Times</Link> 
-   <Link to ="/classification" className="btn btn-outline-info" >Classifications</Link> 
-   <Link to ="/screens"   className="btn btn-outline-info" >Screens</Link> 
-   <Link to ="/new-booking" className="btn btn-outline-info" >Bookings</Link>  
-   <Link to ="/location" className="btn btn-outline-info" >Getting Here</Link> 
-   <Link to ="/placestogo" className="btn btn-outline-info" >Places to Go</Link>
-   <Link to ="/about" className="btn btn-outline-info" >About</Link> 
-   <Link to ="/contactus" className="btn btn-outline-info" >Contact Us</Link> 
-   <Link to ="/discussion" className="btn btn-outline-info" >Discussion Board</Link> 
-   <Link to="/search" className="btn btn-outline-info">Search</Link>
+   <Link to ="/"  className="btn btn-outline-accent" >Home <span class="sr-only">(current)</span></Link>
+   <Link to ="/listings-gallery" className="btn btn-outline-accent" >Gallery</Link> 
+   <Link to ="/new-releases" className="btn btn-outline-accent" >New Releases</Link>
+   <Link to ="/opening-times" className="btn btn-outline-accent">Opening Times</Link> 
+   <Link to ="/classification" className="btn btn-outline-accent" >Classifications</Link> 
+   <Link to ="/screens"   className="btn btn-outline-accent" >Screens</Link> 
+   <Link to ="/new-booking" className="btn btn-outline-accent" >Bookings</Link>  
+   <Link to ="/location" className="btn btn-outline-accent" >Getting Here</Link> 
+   <Link to ="/placestogo" className="btn btn-outline-accent" >Places to Go</Link>
+   <Link to ="/about" className="btn btn-outline-accent" >About</Link> 
+   <Link to ="/contactus" className="btn btn-outline-accent" >Contact Us</Link> 
+   <Link to ="/discussion" className="btn btn-outline-accent" >Discussion Board</Link> 
+   <Link to="/search" className="btn btn-outline-accent">Search</Link>
     </div>
   </div>
 </nav>
