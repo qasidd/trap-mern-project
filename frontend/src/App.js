@@ -64,6 +64,9 @@ function App() {
           <Route path="/discussion" exact>
             <Discussionboard/>
           </Route>
+          <Route path="/search">
+            <Searchable />
+          </Route>
           <Route path="/new-booking/success" component={PaymentSuccess} />
           <Route path="/new-booking/cancelled" component={PaymentCancelled} />
         </Switch>
