@@ -1,0 +1,109 @@
+
+[
+    {
+      "SearchId": 1,
+      "id": 1,
+      "title": "Homepage",
+      "Descrption":"The general homepage of the cinema",
+      "URL":"http://localhost:3000/Home"
+    },
+
+    {
+      "SearchId": 1,
+      "id": 2,
+      "title": "Listings Gallery",
+      "Descrption":"A gallery showing all the films that a present at the cinema",
+      "URL":"http://localhost:3000/listings-gallery"
+    },
+
+    {
+        "SearchId": 1,
+        "id": 3,
+        "title": "Opening Times",
+        "Descrption":"Details about the opening times of the cinema",
+        "URL":"http://localhost:3000/opening-times"
+      },
+
+    {
+        "SearchId": 1,
+        "id": 4,
+        "title": "New Releases Gallery",
+        "Descrption":"A gallery showing all the films that show possible new releases at the cinema",
+        "URL":"http://localhost:3000/opening-times"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 5,
+        "title": "Classifications",
+        "Descrption":"A section of the website that shows film classification, such as age rating. ",
+        "URL":"http://localhost:3000/classification"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 6,
+        "title": "Screens",
+        "Descrption":"A section of the website that the different screens avaliable at the cinema.",
+        "URL":"http://localhost:3000/screens"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 7,
+        "title": "Ticket Bookings",
+        "Descrption":"A page dedicated for booking tickets and food products",
+        "URL":"http://localhost:3000/new-booking"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 8,
+        "title": "Places to Go",
+        "Descrption":"A page to see different bars, resturants, activity venue near by the cinema",
+        "URL":"http://localhost:3000/placestogo"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 9,
+        "title": "Getting There",
+        "Descrption":"A page for detail directions to the cinema, with google maps and public transport directions",
+        "URL":"http://localhost:3000/location"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 10,
+        "title": "Discussion Board",
+        "Descrption":"A page that has a discussion board forum for questions, answers and a friendly chat  ",
+        "URL":"http://localhost:3000/discussion"
+      },
+      
+      {
+        "SearchId": 1,
+        "id": 11,
+        "title": "Email Form",
+        "Descrption":"A page that has the company email, to ask us anything about our products and cinema related",
+        "URL":"http://localhost:3000/EmailForm"
+      },
+      
+      {
+        "SearchId": 1,
+        "id": 12,
+        "title": "About Page",
+        "Descrption":"A page for purpose of the webiste and the staff or members that built the website for enquires",
+        "URL":"http://localhost:3000/about"
+      },
+
+      {
+        "SearchId": 1,
+        "id": 13,
+        "title": "Contact Page",
+        "Descrption":"Contact the owner of the website or the cinema",
+        "URL":"http://localhost:3000/contactus"
+      }
+
+
+      
+]
